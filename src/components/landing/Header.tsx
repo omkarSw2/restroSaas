@@ -44,7 +44,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
+          {/* <Link
             className="hidden md:block text-sm font-medium text-slate-900 hover:text-primary transition-colors"
             href="#"
           >
@@ -52,7 +52,7 @@ export function Header() {
           </Link>
           <Button className="rounded-lg shadow-sm hover:bg-primary-dark transition-all">
             Quick Demo
-          </Button>
+          </Button> */}
         </div>
       </div>
     </header>
