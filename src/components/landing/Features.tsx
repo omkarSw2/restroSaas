@@ -1,4 +1,96 @@
 export function Features() {
+  const featureCategories = [
+    {
+      title: "Core Restaurant Operations",
+      description: "Streamline your daily restaurant management with powerful, easy-to-use tools.",
+      features: [
+        {
+          title: "Lightning-Fast Cloud POS",
+          description: "Equip cashiers to handle walk-in, dining, takeaway, and delivery with speed and reliability.",
+          icon: "point_of_sale",
+        },
+        {
+          title: "Visual Floor Plan & Table Management",
+          description: "Track seating and dining status in real-time with an intuitive, drag-and-drop floor plan.",
+          icon: "table_restaurant",
+        },
+        {
+          title: "Multi-Branch Support",
+          description: "Manage all locations of your restaurant from a single, unified administrative dashboard.",
+          icon: "store",
+        },
+        {
+          title: "Flexible Tax & Service Charges",
+          description: "Easily configure inclusive or exclusive tax settings and customizable service fees.",
+          icon: "receipt_long",
+        },
+      ],
+    },
+    {
+      title: "Customer Ordering Experience",
+      description: "Delight your guests with modern, frictionless ways to view, order, and pay.",
+      features: [
+        {
+          title: "Scan & Order (QR Menus)",
+          description: "Offer contactless, mobile-optimized digital menus accessible instantly via QR code.",
+          icon: "qr_code_scanner",
+        },
+        {
+          title: "Customer Web App",
+          description: "Enable seamless browsing, item customization, and real-time order tracking for your guests.",
+          icon: "devices",
+        },
+        {
+          title: "Dynamic Promotions & Happy Hours",
+          description: "Boost sales and attract foot traffic during targeted time slots with automated discounts.",
+          icon: "local_offer",
+        },
+        {
+          title: "Multiple Payment Gateways",
+          description: "Accept various payment methods effortlessly and track credit balances for your regular customers.",
+          icon: "payments",
+        },
+      ],
+    },
+    {
+      title: "Kitchen & Fulfillment",
+      description: "Connect your front-of-house to the kitchen for perfect order execution.",
+      features: [
+        {
+          title: "Kitchen Display System (KDS)",
+          description: "Digital screens for chefs to track individual item statuses (Pending, Preparing, Done) without paper tickets.",
+          icon: "kitchen",
+        },
+        {
+          title: "Order Status Screen (OSS)",
+          description: "Keep guests informed with a customer-facing digital board displaying 'Preparing' and 'Ready' order numbers.",
+          icon: "display_settings",
+        },
+      ],
+    },
+    {
+      title: "Security & Management",
+      description: "Protect your business and understand your performance with enterprise-grade controls.",
+      features: [
+        {
+          title: "Granular Role-Based Access Control",
+          description: "Set precise permissions for Admins, Chefs, Waiters, and Cashiers to keep your data secure.",
+          icon: "manage_accounts",
+        },
+        {
+          title: "Comprehensive Analytics & Reporting",
+          description: "Gain deep insights into sales trends, item popularity, and multi-branch performance metrics.",
+          icon: "analytics",
+        },
+        {
+          title: "Multi-Language Support",
+          description: "Operate globally with comprehensive multi-language and Right-to-Left (RTL) capabilities.",
+          icon: "language",
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       {/* Logos Section */}
@@ -44,80 +136,36 @@ export function Features() {
               restaurants across the globe with robust, scalable tools.
             </p>
           </div>
-          <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4">
-              <div className="relative group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                <dt className="flex flex-col gap-4 text-base font-semibold leading-7 text-slate-900">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <span
-                      className="material-symbols-outlined text-primary"
-                      style={{ fontSize: "28px" }}
-                    >
-                      receipt_long
-                    </span>
-                  </div>
-                  Smart Billing
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Automated invoicing, split checks, and room charges for
-                  seamless guest check-out experiences.
-                </dd>
+          
+          <div className="mt-16 flex flex-col gap-20 sm:mt-20 lg:mt-24">
+            {featureCategories.map((category) => (
+              <div key={category.title} className="flex flex-col gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight text-slate-900">{category.title}</h3>
+                  <p className="mt-2 text-base leading-7 text-slate-600">{category.description}</p>
+                </div>
+                <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-4">
+                  {category.features.map((feature) => (
+                    <div key={feature.title} className="relative group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1 h-full flex flex-col">
+                      <dt className="flex flex-col gap-4 text-base font-semibold leading-7 text-slate-900">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                          <span
+                            className="material-symbols-outlined text-primary"
+                            style={{ fontSize: "28px" }}
+                          >
+                            {feature.icon}
+                          </span>
+                        </div>
+                        {feature.title}
+                      </dt>
+                      <dd className="mt-2 text-base leading-7 text-slate-600 grow">
+                        {feature.description}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
-
-              <div className="relative group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                <dt className="flex flex-col gap-4 text-base font-semibold leading-7 text-slate-900">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <span
-                      className="material-symbols-outlined text-primary"
-                      style={{ fontSize: "28px" }}
-                    >
-                      restaurant_menu
-                    </span>
-                  </div>
-                  Menu Management
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Centralized control over menus, pricing, modifiers, and
-                  inventory across all your dining locations.
-                </dd>
-              </div>
-
-              <div className="relative group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                <dt className="flex flex-col gap-4 text-base font-semibold leading-7 text-slate-900">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <span
-                      className="material-symbols-outlined text-primary"
-                      style={{ fontSize: "28px" }}
-                    >
-                      storefront
-                    </span>
-                  </div>
-                  Multi-Outlet Support
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Scale easily from a single location to a global chain with
-                  unified reporting and staff management.
-                </dd>
-              </div>
-
-              <div className="relative group bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-1">
-                <dt className="flex flex-col gap-4 text-base font-semibold leading-7 text-slate-900">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                    <span
-                      className="material-symbols-outlined text-primary"
-                      style={{ fontSize: "28px" }}
-                    >
-                      bar_chart
-                    </span>
-                  </div>
-                  Real-time Analytics
-                </dt>
-                <dd className="mt-2 text-base leading-7 text-slate-600">
-                  Make data-driven decisions with live sales dashboards, labor
-                  cost tracking, and performance metrics.
-                </dd>
-              </div>
-            </dl>
+            ))}
           </div>
         </div>
       </section>

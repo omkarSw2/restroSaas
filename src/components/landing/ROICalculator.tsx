@@ -12,9 +12,9 @@ export function ROICalculator() {
   const monthlySavings = outlets[0] * revenue[0] * 0.015;
 
   const formatCurrency = (amount: number) => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-IN", {
       style: "currency",
-      currency: "USD",
+      currency: "INR",
       maximumFractionDigits: 0,
     }).format(amount);
   };
@@ -89,14 +89,14 @@ export function ROICalculator() {
 
               <div>
                 <label className="block text-sm font-semibold leading-6 text-slate-900 mb-2">
-                  Monthly Revenue per Outlet ($)
+                  Monthly Revenue per Outlet (₹)
                 </label>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-slate-500 text-xs">$10k</span>
+                  <span className="text-slate-500 text-xs">₹10k</span>
                   <span className="text-slate-900 font-bold text-lg">
                     {formatCurrency(revenue[0])}
                   </span>
-                  <span className="text-slate-500 text-xs">$500k+</span>
+                  <span className="text-slate-500 text-xs">₹500k+</span>
                 </div>
                 <Slider
                   value={revenue}

@@ -50,7 +50,7 @@ export function Pricing() {
             </p>
             <div className="mt-6 flex items-baseline gap-x-1">
               <span className="text-4xl font-bold tracking-tight text-slate-900">
-                $49
+                ₹3,999
               </span>
               <span className="text-sm font-semibold leading-6 text-slate-500">
                 /month
@@ -118,7 +118,7 @@ export function Pricing() {
             </p>
             <div className="mt-6 flex items-baseline gap-x-1">
               <span className="text-4xl font-bold tracking-tight text-slate-900">
-                $129
+                ₹9,999
               </span>
               <span className="text-sm font-semibold leading-6 text-slate-500">
                 /month
