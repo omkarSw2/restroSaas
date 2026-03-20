@@ -9,248 +9,113 @@ export function Pricing() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-base font-semibold leading-7 text-primary">
-            Pricing Plans
+            Simple Pricing
           </h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            Scalable Solutions for Every Stage
+            Everything you need. One simple price.
           </p>
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            Choose a plan that fits your business needs, from single outlets to
-            global hotel chains.
+            No complex tiers or hidden fees. Get full access to all our premium
+            features to run your operations smoothly.
           </p>
-
-          <div className="mt-8 flex justify-center items-center space-x-4">
-            <span className="text-sm font-medium text-slate-500">Monthly</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                defaultChecked
-                className="sr-only peer"
-                type="checkbox"
-                value=""
-              />
-              <div className="w-11 h-6 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
-            </label>
-            <span className="text-sm font-medium text-slate-900">
-              Annually{" "}
-              <span className="ml-1 text-xs text-primary font-bold">
-                (Save 20%)
-              </span>
-            </span>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8 items-start">
-          {/* Starter Plan */}
-          <div className="flex flex-col bg-white rounded-3xl p-8 ring-1 ring-slate-200 hover:shadow-lg transition-all">
-            <h3 className="text-lg font-semibold leading-8 text-slate-900">
-              Starter
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-slate-500">
-              Perfect for single outlets and small cafes getting started.
-            </p>
-            <div className="mt-6 flex items-baseline gap-x-1">
-              <span className="text-4xl font-bold tracking-tight text-slate-900">
-                ₹3,999
-              </span>
-              <span className="text-sm font-semibold leading-6 text-slate-500">
-                /month
-              </span>
-            </div>
-            <ul
-              className="mt-8 space-y-3 text-sm leading-6 text-slate-600"
-              role="list"
-            >
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                1 POS Terminal
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Basic Inventory Management
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Standard Reporting
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Email Support
-              </li>
-            </ul>
-            <Link
-              className="mt-8 block rounded-md bg-slate-100 px-3 py-2 text-center text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 transition-all"
-              href="#"
-            >
-              Get Started
-            </Link>
-          </div>
+        <div className="mx-auto max-w-5xl">
+          <div className="relative flex flex-col lg:flex-row bg-white rounded-3xl p-8 sm:p-12 ring-2 ring-primary shadow-2xl shadow-primary/10 overflow-hidden text-left items-center gap-12">
+            {/* Background design accents */}
+            <div className="absolute -top-32 -right-32 h-[400px] w-[400px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-32 -left-32 h-[300px] w-[300px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-          {/* Professional Plan */}
-          <div className="relative flex flex-col bg-white rounded-3xl p-8 ring-2 ring-primary shadow-xl shadow-primary/10 z-10 scale-105 transform">
-            <div className="absolute -top-5 left-0 right-0 mx-auto w-32 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white text-center">
-              Most Popular
-            </div>
-            <h3 className="text-lg font-semibold leading-8 text-slate-900">
-              Professional
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-slate-500">
-              Ideal for growing hotels and busy restaurants needing more power.
-            </p>
-            <div className="mt-6 flex items-baseline gap-x-1">
-              <span className="text-4xl font-bold tracking-tight text-slate-900">
-                ₹9,999
-              </span>
-              <span className="text-sm font-semibold leading-6 text-slate-500">
-                /month
-              </span>
-            </div>
-            <ul
-              className="mt-8 space-y-3 text-sm leading-6 text-slate-600"
-              role="list"
-            >
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Up to 5 POS Terminals
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Advanced Menu Management
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Table Reservation System
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Customer Loyalty Program
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                24/7 Priority Support
-              </li>
-            </ul>
-            <Link
-              className="mt-8 block rounded-md bg-primary px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all"
-              href="#"
-            >
-              Start Free Trial
-            </Link>
-          </div>
+            <div className="flex-1 relative z-10 w-full">
+              <div className="inline-flex rounded-full bg-primary/10 px-4 py-1.5 text-sm font-bold text-primary mb-6 border border-primary/20 shadow-sm">
+                All-in-One Platform
+              </div>
+              <h3 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                The Ultimate Hospitality OS
+              </h3>
+              <p className="mt-4 text-lg leading-8 text-slate-600">
+                Join hundreds of successful venues using our platform to scale
+                their branches, manage operations effortlessly, and delight
+                their customers daily.
+              </p>
 
-          {/* Enterprise Plan */}
-          <div className="flex flex-col bg-white rounded-3xl p-8 ring-1 ring-slate-200 hover:shadow-lg transition-all">
-            <h3 className="text-lg font-semibold leading-8 text-slate-900">
-              Enterprise
-            </h3>
-            <p className="mt-4 text-sm leading-6 text-slate-500">
-              Comprehensive solutions for large hotel chains and franchises.
-            </p>
-            <div className="mt-6 flex items-baseline gap-x-1">
-              <span className="text-4xl font-bold tracking-tight text-slate-900">
-                Custom
-              </span>
+              <ul className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6 text-base leading-6 text-slate-700">
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    Unlimited POS Terminals
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    Multi-Location Sync
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    Advanced Menu Control
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    Table & Reservations
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    Integrated Loyalty
+                  </span>
+                </li>
+                <li className="flex gap-x-3 items-center">
+                  <span className="material-symbols-outlined text-green-500 text-[24px]">
+                    check_circle
+                  </span>
+                  <span className="font-semibold text-slate-800">
+                    24/7 Priority Support
+                  </span>
+                </li>
+              </ul>
             </div>
-            <ul
-              className="mt-8 space-y-3 text-sm leading-6 text-slate-600"
-              role="list"
-            >
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
+
+            <div className="lg:w-96 flex-none bg-slate-50 rounded-2xl p-8 ring-1 ring-slate-200 text-center relative z-10 w-full shadow-inner">
+              <p className="text-sm font-black text-slate-500 uppercase tracking-widest">
+                Get Started
+              </p>
+              <div className="mt-6 flex items-baseline justify-center gap-x-1">
+                <span className="text-5xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+                  ₹6,999
                 </span>
-                Unlimited Terminals & Outlets
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
+                <span className="text-sm font-bold leading-6 text-slate-500">
+                  /mo
                 </span>
-                Multi-Location Headquarters
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                API Access & Custom Integrations
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                Dedicated Account Manager
-              </li>
-              <li className="flex gap-x-3">
-                <span
-                  className="material-symbols-outlined text-primary h-6 w-5 flex-none"
-                  style={{ fontSize: "20px" }}
-                >
-                  check
-                </span>
-                SLA & Uptime Guarantee
-              </li>
-            </ul>
-            <Link
-              className="mt-8 block rounded-md bg-slate-100 px-3 py-2 text-center text-sm font-semibold text-slate-900 shadow-sm hover:bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-600 transition-all"
-              href="#"
-            >
-              Contact Sales
-            </Link>
+              </div>
+              <p className="mt-2 text-xs font-medium text-slate-500 bg-white rounded-full mx-auto w-max px-3 py-1 ring-1 ring-slate-200">
+                Billed annually
+              </p>
+              <Link
+                className="mt-8 block rounded-xl bg-primary px-4 py-4 text-center text-base font-bold text-white shadow-[0_4px_14px_0_rgba(234,88,12,0.39)] hover:bg-primary-dark hover:shadow-[0_6px_20px_rgba(234,88,12,0.23)] hover:-translate-y-0.5 transition-all duration-200"
+                href="#"
+              >
+                Start Free Trial
+              </Link>
+              <p className="mt-5 text-xs text-slate-500">
+                14-day free trial. No credit card needed.
+              </p>
+            </div>
           </div>
         </div>
       </div>
