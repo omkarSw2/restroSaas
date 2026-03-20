@@ -21,7 +21,7 @@ export function ROICalculator() {
 
   return (
     <section
-      className="py-24 bg-slate-900 relative overflow-hidden"
+      className="py-24 bg-slate-50 relative overflow-hidden"
       id="roi-calculator"
     >
       <div className="absolute inset-0 hero-pattern opacity-10 pointer-events-none"></div>
@@ -33,15 +33,15 @@ export function ROICalculator() {
             <h2 className="text-base font-semibold leading-7 text-primary">
               Calculate Your Value
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
               See How Much You Could Save
             </p>
-            <p className="mt-6 text-lg leading-8 text-slate-300">
+            <p className="mt-6 text-lg leading-8 text-slate-600">
               Our efficient POS system reduces operational costs, minimizes food
               waste, and speeds up table turnover. Use the calculator to
               estimate your potential monthly savings.
             </p>
-            <ul className="mt-10 space-y-4 text-slate-300">
+            <ul className="mt-10 space-y-4 text-slate-600">
               <li className="flex items-start">
                 <span className="material-symbols-outlined text-primary mr-3 mt-1">
                   check_circle

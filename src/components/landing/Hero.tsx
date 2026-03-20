@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="relative bg-slate-900 pt-24 pb-32 sm:pt-32 sm:pb-40 overflow-hidden">
+    <section className="relative bg-slate-50 pt-24 pb-32 sm:pt-32 sm:pb-40 overflow-hidden">
       <div className="absolute inset-0 hero-pattern opacity-20"></div>
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 blur-3xl opacity-20">
         <div className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ea580c] to-[#fb923c] opacity-30"></div>
@@ -11,7 +11,7 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 flex justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-400 ring-1 ring-white/10 hover:ring-white/20">
+            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-slate-600 ring-1 ring-slate-900/10 hover:ring-slate-900/20">
               New: Multi-location inventory sync.{" "}
               <Link className="font-semibold text-primary" href="#">
                 <span aria-hidden="true" className="absolute inset-0"></span>
@@ -19,11 +19,11 @@ export function Hero() {
               </Link>
             </div>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
             Streamline Your{" "}
             <span className="text-gradient">Hospitality Operations</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-slate-300">
+          <p className="mt-6 text-lg leading-8 text-slate-600">
             The all-in-one POS and Billing solution designed for modern boutique
             hotels and high-end restaurants. Manage reservations, orders, and
             payments seamlessly.
@@ -37,7 +37,7 @@ export function Hero() {
             </Button>
             <Button
               variant="ghost"
-              className="group flex items-center gap-2 text-sm font-semibold leading-6 text-white transition-all hover:text-primary hover:bg-transparent"
+              className="group flex items-center gap-2 text-sm font-semibold leading-6 text-slate-900 transition-all hover:text-primary hover:bg-transparent"
             >
               View Features
               <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">
