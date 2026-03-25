@@ -1,85 +1,97 @@
+"use client";
+
+import { motion, Variants } from "framer-motion";
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.3 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 export function HowItWorks() {
+  const steps = [
+    {
+      number: "01",
+      title: "Connect",
+      description: "Create your account and set up your property profile details in our secure cloud platform.",
+      icon: "person_add"
+    },
+    {
+      number: "02",
+      title: "Configure",
+      description: "Easily customize your menus, floor plans, and define staff roles and permission levels.",
+      icon: "settings_applications"
+    },
+    {
+      number: "03",
+      title: "Launch",
+      description: "Go live instantly. Start processing orders, billing guests, and tracking revenue in real-time.",
+      icon: "rocket_launch"
+    }
+  ];
+
   return (
-    <section
-      className="py-24 bg-slate-50 relative overflow-hidden"
-      id="how-it-works"
-    >
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center mb-16">
-          <h2 className="text-base font-semibold leading-7 text-primary">
+    <section className="py-24 bg-zinc-900 relative overflow-hidden" id="how-it-works">
+      <div className="mx-auto max-w-7xl px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto max-w-2xl text-center mb-24"
+        >
+          <h2 className="text-base font-bold leading-7 text-primary uppercase tracking-widest font-headline">
             Simple Onboarding
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            How It Works
+          <p className="mt-2 text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-headline">
+            How It <span className="text-primary italic">Works</span>
           </p>
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Get up and running in minutes, not months. Our streamlined process
-            ensures a smooth transition.
+          <p className="mt-6 text-lg leading-8 text-zinc-400 font-body">
+            Get up and running in minutes, not months. Our streamlined process ensures a smooth transition to a high-velocity operation.
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative">
-          <div
-            className="absolute top-1/2 left-0 w-full border-t-2 border-slate-200 -z-10 hidden lg:block"
-            style={{ transform: "translateY(-50%)", top: "4rem" }}
-          ></div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
-            <div className="relative flex flex-col items-center text-center group">
-              <div className="flex items-center justify-center w-32 h-32 rounded-full bg-white border-4 border-slate-100 shadow-sm mb-6 z-10 group-hover:border-primary/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-slate-50 text-primary">
-                  <span className="material-symbols-outlined text-5xl">
-                    person_add
-                  </span>
+          {/* Connecting Line */}
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-white/5 -z-10 hidden lg:block -translate-y-[100px]"></div>
+          
+          <motion.div 
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-8"
+          >
+            {steps.map((step) => (
+              <motion.div key={step.number} variants={itemVariants} className="relative flex flex-col items-center text-center group">
+                <div className="flex items-center justify-center w-32 h-32 rounded-full bg-zinc-800 hover:bg-zinc-700 border-4 border-white/5 shadow-2xl mb-8 z-10 transition-all duration-500 group-hover:scale-110">
+                  <div className="flex items-center justify-center w-24 h-24 rounded-full bg-zinc-900 text-primary shadow-inner">
+                    <span className="material-symbols-outlined text-5xl">
+                      {step.icon}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="absolute top-0 right-0 -mr-4 mt-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center border-4 border-white">
-                1
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Connect</h3>
-              <p className="text-slate-600 leading-relaxed px-4">
-                Create your account and set up your property profile details in
-                our secure cloud platform.
-              </p>
-            </div>
+                
+                <div className="absolute top-0 right-1/2 translate-x-[60px] lg:translate-x-[70px] -mt-2 bg-primary text-white text-sm font-black px-3 py-1 rounded-full shadow-lg border-2 border-zinc-900 z-20 font-headline">
+                  {step.number}
+                </div>
 
-            <div className="relative flex flex-col items-center text-center group">
-              <div className="flex items-center justify-center w-32 h-32 rounded-full bg-white border-4 border-slate-100 shadow-sm mb-6 z-10 group-hover:border-primary/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-slate-50 text-primary">
-                  <span className="material-symbols-outlined text-5xl">
-                    settings_applications
-                  </span>
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 -mr-4 mt-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center border-4 border-white">
-                2
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Configure
-              </h3>
-              <p className="text-slate-600 leading-relaxed px-4">
-                Easily customize your menus, floor plans, and define staff roles
-                and permission levels.
-              </p>
-            </div>
-
-            <div className="relative flex flex-col items-center text-center group">
-              <div className="flex items-center justify-center w-32 h-32 rounded-full bg-white border-4 border-slate-100 shadow-sm mb-6 z-10 group-hover:border-primary/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-24 h-24 rounded-full bg-slate-50 text-primary">
-                  <span className="material-symbols-outlined text-5xl">
-                    rocket_launch
-                  </span>
-                </div>
-              </div>
-              <div className="absolute top-0 right-0 -mr-4 mt-2 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full w-8 h-8 flex items-center justify-center border-4 border-white">
-                3
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Launch</h3>
-              <p className="text-slate-600 leading-relaxed px-4">
-                Go live instantly. Start processing orders, billing guests, and
-                tracking revenue in real-time.
-              </p>
-            </div>
-          </div>
+                <h3 className="text-2xl font-bold text-white mb-4 font-headline tracking-tight group-hover:text-primary transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-zinc-400 leading-relaxed px-4 font-body">
+                  {step.description}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

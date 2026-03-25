@@ -17,7 +17,7 @@ export async function submitContactForm(data: ContactFormValues) {
     };
   }
 
-  const { fullName, email, phone, hotelName, outlets, message } = validatedFields.data;
+  const { fullName, email, businessType, message } = validatedFields.data;
 
   try {
     // Connect to MongoDB
@@ -27,9 +27,7 @@ export async function submitContactForm(data: ContactFormValues) {
     await Contact.create({
       fullName,
       email,
-      phone,
-      hotelName,
-      outlets,
+      businessType,
       message,
     });
 
@@ -39,8 +37,8 @@ export async function submitContactForm(data: ContactFormValues) {
       await resend.emails.send({
         from: "Acme <onboarding@resend.dev>",
         to: ["delivered@resend.dev"], // Replace with actual recipient
-        subject: `New Lead: ${hotelName || fullName}`,
-        text: `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nHotel: ${hotelName}\nOutlets: ${outlets}\nMessage: ${message}`,
+        subject: `New Lead: ${businessType || fullName}`,
+        text: `Name: ${fullName}\nEmail: ${email}\nBusiness Type: ${businessType}\nMessage: ${message}`,
       });
     }
 

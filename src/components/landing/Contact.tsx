@@ -3,16 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 import {
   Form,
   FormControl,
@@ -38,10 +29,8 @@ export function Contact() {
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       fullName: "",
-      hotelName: "",
       email: "",
-      phone: "",
-      outlets: "",
+      businessType: "",
       message: "",
     },
   });
@@ -80,230 +69,227 @@ export function Contact() {
   }
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden" id="contact">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start">
-          <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10 border border-slate-100">
-            <div className="mb-8">
-              <h2 className="text-2xl font-bold tracking-tight text-slate-900">
-                Get a Free Demo
-              </h2>
-              <p className="mt-2 text-slate-600">
-                Fill out the form below and our team will get back to you within
-                24 hours.
-              </p>
-            </div>
+    <section className="bg-background pt-24" id="contact">
+      {/* Hero Header */}
+      <div className="relative py-20 px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-6xl md:text-8xl font-black font-headline tracking-tighter text-on-surface leading-tight mb-6"
+          >
+            Get in <span className="text-primary italic">Touch</span> with Us
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="max-w-2xl text-xl text-secondary font-medium leading-relaxed"
+          >
+            Ready to accelerate your commerce? Our team is standing by to build your custom Kinetic experience.
+          </motion.p>
+        </div>
+        {/* Decorative background elements */}
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+        <div className="absolute bottom-0 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+      </div>
 
-            {submitStatus && (
-              <div
-                className={`mb-6 p-4 rounded-md ${submitStatus.success ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
-              >
-                {submitStatus.message}
+      {/* Main Content Grid */}
+      <div className="max-w-7xl mx-auto px-8 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        {/* Request a Demo Form (Left Column) */}
+        <motion.div 
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-8 md:p-12 shadow-[0_32px_64px_-12px_rgba(0,0,0,0.08)] border border-white"
+        >
+          <h2 className="text-3xl font-bold font-headline mb-8 flex items-center gap-4 text-on-surface">
+            Request a Demo
+            <span className="w-16 h-1 bg-primary rounded-full"></span>
+          </h2>
+
+          {submitStatus && (
+            <div
+              className={`mb-6 p-4 rounded-xl ${submitStatus.success ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
+            >
+              <div className="flex items-center gap-2">
+                <span className="material-symbols-outlined">
+                  {submitStatus.success ? "check_circle" : "error"}
+                </span>
+                <span className="font-semibold">{submitStatus.message}</span>
               </div>
-            )}
+            </div>
+          )}
 
-            <Form {...form}>
-              <form
-                onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6"
-              >
-                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
-                  <FormField
-                    control={form.control}
-                    name="fullName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="hotelName"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Hotel/Restaurant Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Acme Dining" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Work Email</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="john@example.com"
-                            type="email"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="phone"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Phone Number</FormLabel>
-                        <FormControl>
-                          <Input
-                            placeholder="+1 (555) 000-0000"
-                            type="tel"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                </div>
-
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField
                   control={form.control}
-                  name="outlets"
+                  name="fullName"
                   render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Number of Outlets</FormLabel>
-                      <Select
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        value={field.value}
-                      >
-                        <FormControl>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select locations" />
-                          </SelectTrigger>
-                        </FormControl>
-                        <SelectContent>
-                          <SelectItem value="1-5">1-5 Locations</SelectItem>
-                          <SelectItem value="6-20">6-20 Locations</SelectItem>
-                          <SelectItem value="20+">20+ Locations</SelectItem>
-                        </SelectContent>
-                      </Select>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
+                    <FormItem className="space-y-2 group">
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Full Name</FormLabel>
                       <FormControl>
-                        <Textarea
-                          placeholder="How can we help you?"
-                          rows={4}
+                        <input 
                           {...field}
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
+                          placeholder="John Doe" 
                         />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-
-                <Button
-                  type="submit"
-                  className="w-full bg-primary hover:bg-primary-dark"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
-                </Button>
-              </form>
-            </Form>
-          </div>
-
-          <div className="lg:pl-10 pt-10 lg:pt-0 flex flex-col justify-center h-full">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Ready to upgrade your POS?
-            </h2>
-            <p className="mt-4 text-lg text-slate-600">
-              Join over 500+ boutique hotels and restaurants streamlining their
-              operations with our platform.
-            </p>
-            <dl className="mt-10 space-y-8 text-base leading-7 text-slate-600">
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Address</span>
-                  <span className="material-symbols-outlined text-primary">
-                    location_on
-                  </span>
-                </dt>
-                <dd>
-                  500 Howard Street
-                  <br />
-                  San Francisco, CA 94105
-                </dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Telephone</span>
-                  <span className="material-symbols-outlined text-primary">
-                    call
-                  </span>
-                </dt>
-                <dd>
-                  <a
-                    className="hover:text-primary"
-                    href="tel:+1 (555) 234-5678"
-                  >
-                    +1 (555) 234-5678
-                  </a>
-                </dd>
-              </div>
-              <div className="flex gap-x-4">
-                <dt className="flex-none">
-                  <span className="sr-only">Email</span>
-                  <span className="material-symbols-outlined text-primary">
-                    mail
-                  </span>
-                </dt>
-                <dd>
-                  <a
-                    className="hover:text-primary"
-                    href="mailto:hello@pos-saas.com"
-                  >
-                    hello@pos-saas.com
-                  </a>
-                </dd>
-              </div>
-            </dl>
-
-            <div className="mt-10 rounded-xl overflow-hidden shadow-lg h-64 bg-slate-200 relative">
-              <div
-                className="absolute inset-0 flex items-center justify-center bg-slate-200"
-                data-location="San Francisco"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  alt="Map showing office location in San Francisco"
-                  className="w-full h-full object-cover grayscale opacity-75"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAklDAp9WDa3mvzrbA1bnBdlNaFIhvFCtm0XBwRY1Yn-4oDEpNRrS9I8wE_VJ94UcqVWe7EMe-FtNlZBZwzHpHzj3nsLXmUrptVWtG8EjzBqLBqEq4CoGvzQ4jwPWG0l-wJ7QIgj-DBTWKKdxwnIYuyNskk3j5GOrGXvJeUoEbeDxbNry7lVW_07_TsHqKOpNf3X41mN5bM4DZKtdRGW1AfnHyII6QJNMcUrn16O_zV4VNCRvRRaYK4znmj6oTfnne72m2dYgsif25Y"
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2 group">
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Work Email</FormLabel>
+                      <FormControl>
+                        <input 
+                          {...field}
+                          type="email"
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
+                          placeholder="john@business.com" 
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-                <div className="absolute inset-0 bg-slate-300 animate-pulse flex items-center justify-center text-slate-500 font-medium">
-                  Map Loading...
-                </div>
+              </div>
+
+              <FormField
+                control={form.control}
+                name="businessType"
+                render={({ field }) => (
+                  <FormItem className="space-y-2 group">
+                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Business Type</FormLabel>
+                    <FormControl>
+                      <select 
+                        {...field}
+                        className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface appearance-none"
+                      >
+                        <option value="">Select Type</option>
+                        <option value="Retail Boutique">Retail Boutique</option>
+                        <option value="Quick Service Restaurant">Quick Service Restaurant</option>
+                        <option value="Fine Dining">Fine Dining</option>
+                        <option value="Enterprise Retail">Enterprise Retail</option>
+                      </select>
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem className="space-y-2 group">
+                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Your Message</FormLabel>
+                    <FormControl>
+                      <textarea 
+                        {...field}
+                        rows={4}
+                        className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
+                        placeholder="Tell us about your operational needs..." 
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full py-5 bg-zinc-900 hover:bg-black text-white rounded-xl font-bold text-lg shadow-xl shadow-zinc-200 hover:shadow-primary/20 active:scale-[0.98] transition-all flex justify-center items-center gap-3 disabled:opacity-50"
+              >
+                {isSubmitting ? "Processing..." : "Request Your Kinetic Demo"}
+                <span className="material-symbols-outlined icon-filled text-primary">bolt</span>
+              </button>
+            </form>
+          </Form>
+        </motion.div>
+
+        {/* Contact Info & Map (Right Column) */}
+        <motion.div 
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className="lg:col-span-5 space-y-8"
+        >
+          {/* Contact Details */}
+          <div className="bg-white rounded-3xl p-8 space-y-10 shadow-sm border border-zinc-100">
+            <div className="flex gap-6 items-start">
+              <div className="bg-primary/10 p-4 rounded-2xl text-primary">
+                <span className="material-symbols-outlined text-3xl icon-filled">phone_in_talk</span>
+              </div>
+              <div>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Call Our Strategists</h4>
+                <p className="text-secondary font-medium tracking-tight">+1 (888) KINETIC-POS</p>
+                <p className="text-zinc-400 text-sm mt-1">Mon-Fri, 8am-8pm EST</p>
+              </div>
+            </div>
+            <div className="flex gap-6 items-start">
+              <div className="bg-primary/10 p-4 rounded-2xl text-primary">
+                <span className="material-symbols-outlined text-3xl icon-filled">mail</span>
+              </div>
+              <div>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Email Support</h4>
+                <p className="text-secondary font-medium tracking-tight">accelerate@kineticledger.com</p>
+                <p className="text-zinc-400 text-sm mt-1">Response within 2 hours</p>
+              </div>
+            </div>
+            <div className="flex gap-6 items-start">
+              <div className="bg-primary/10 p-4 rounded-2xl text-primary">
+                <span className="material-symbols-outlined text-3xl icon-filled">location_on</span>
+              </div>
+              <div>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Global HQ</h4>
+                <p className="text-secondary font-medium tracking-tight">42 Velocity Plaza, Suite 100</p>
+                <p className="text-zinc-400 text-sm mt-1">Austin, TX 78701</p>
               </div>
             </div>
           </div>
-        </div>
+
+          {/* Map Component */}
+          <div className="relative group rounded-3xl overflow-hidden shadow-2xl aspect-video lg:aspect-square">
+            <img 
+              alt="Austin Texas downtown map" 
+              className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-in-out" 
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUDiclazY7xnApkzMLUTCSHAGoflbTCpdtr4Ksf9bz54Ui1SHYvChG0gCAnOALcXqyz5amSjOuhIxthZfd2svypBUGsBMRdFvRMOkC9Krt2oBDrB05m8TP4ax0uL3cL6iWX791Z2whMDYTxXmuGDT9bHg__cP7XIprcMcBaFM27S6tcB2OXEtwg9AJlAxBeNUxM1UnhCN_Q4rvnLUhKKWApDMVv8mDcbhYnGSryIHD6nmMtaOIzdYOvuO7nH5ODOsxsGu9JmJbLWU" 
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 to-transparent flex items-end p-6 pointer-events-none">
+              <div className="bg-white/80 backdrop-blur-md px-5 py-3 rounded-2xl flex items-center gap-3 shadow-lg border border-white/20">
+                <span className="material-symbols-outlined text-primary icon-filled">location_on</span>
+                <span className="font-bold text-zinc-900">Open in Maps</span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
+
+      {/* Social Proof Section */}
+      <section className="bg-[#141414] py-24 px-8">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+          <div className="text-white space-y-4 text-center md:text-left">
+            <h3 className="text-4xl md:text-5xl font-headline font-black">Trusted by 15,000+ Merchants</h3>
+            <p className="text-zinc-400 max-w-lg text-lg">From artisanal bakeries to multi-state retailers, we provide the kinetic energy that drives growth.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-40 grayscale brightness-200 text-white">
+            <span className="material-symbols-outlined text-5xl">storefront</span>
+            <span className="material-symbols-outlined text-5xl">restaurant</span>
+            <span className="material-symbols-outlined text-5xl">shopping_cart</span>
+            <span className="material-symbols-outlined text-5xl">local_cafe</span>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }
