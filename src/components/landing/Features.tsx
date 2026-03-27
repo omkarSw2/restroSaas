@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export function Features() {
@@ -51,13 +52,13 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-10 bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 group hover:-translate-y-1 transition-transform"
+          className="p-10 kinetic-gradient rounded-xl shadow-sm group hover:-translate-y-1 transition-transform"
         >
-          <div className="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-12">
+          <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-12">
             <span className="material-symbols-outlined text-4xl">inventory_2</span>
           </div>
-          <h3 className="font-headline text-3xl font-bold mb-4 text-on-surface">Inventory Control</h3>
-          <p className="text-on-surface-variant leading-relaxed text-lg">
+          <h3 className="font-headline text-3xl font-bold mb-4 text-white">Inventory Control</h3>
+          <p className="text-white/90 leading-relaxed text-lg">
             Real-time stock tracking with low-inventory alerts and automated supplier reordering.
           </p>
         </motion.div>
@@ -74,9 +75,9 @@ export function Features() {
             <p className="text-on-surface-variant leading-relaxed text-lg mb-6">
               Visual dashboards that show you exactly what&apos;s selling and when, accessible from any device.
             </p>
-            <a className="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+            <Link className="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="#contact">
               Explore Data Suite <span className="material-symbols-outlined">arrow_forward</span>
-            </a>
+            </Link>
           </div>
           <div className="flex-1 bg-white p-6 rounded-xl shadow-lg rotate-1">
             <div className="flex gap-2 mb-4">

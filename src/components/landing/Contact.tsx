@@ -73,7 +73,7 @@ export function Contact() {
       {/* Hero Header */}
       <div className="relative py-20 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -81,14 +81,15 @@ export function Contact() {
           >
             Get in <span className="text-primary italic">Touch</span> with Us
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="max-w-2xl text-xl text-secondary font-medium leading-relaxed"
           >
-            Ready to accelerate your commerce? Our team is standing by to build your custom Kinetic experience.
+            Ready to accelerate your commerce? Our team is standing by to build
+            your custom Kinetic experience.
           </motion.p>
         </div>
         {/* Decorative background elements */}
@@ -99,7 +100,7 @@ export function Contact() {
       {/* Main Content Grid */}
       <div className="max-w-7xl mx-auto px-8 pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         {/* Request a Demo Form (Left Column) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -131,12 +132,14 @@ export function Contact() {
                   name="fullName"
                   render={({ field }) => (
                     <FormItem className="space-y-2 group">
-                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Full Name</FormLabel>
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                        Full Name
+                      </FormLabel>
                       <FormControl>
-                        <input 
+                        <input
                           {...field}
-                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
-                          placeholder="John Doe" 
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
+                          placeholder="John Doe"
                         />
                       </FormControl>
                       <FormMessage />
@@ -148,13 +151,15 @@ export function Contact() {
                   name="email"
                   render={({ field }) => (
                     <FormItem className="space-y-2 group">
-                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Work Email</FormLabel>
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                        Work Email
+                      </FormLabel>
                       <FormControl>
-                        <input 
+                        <input
                           {...field}
                           type="email"
-                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
-                          placeholder="john@business.com" 
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
+                          placeholder="john@business.com"
                         />
                       </FormControl>
                       <FormMessage />
@@ -168,17 +173,23 @@ export function Contact() {
                 name="businessType"
                 render={({ field }) => (
                   <FormItem className="space-y-2 group">
-                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Business Type</FormLabel>
+                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                      Business Type
+                    </FormLabel>
                     <FormControl>
-                      <select 
+                      <select
                         {...field}
                         className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface appearance-none"
                       >
                         <option value="">Select Type</option>
                         <option value="Retail Boutique">Retail Boutique</option>
-                        <option value="Quick Service Restaurant">Quick Service Restaurant</option>
+                        <option value="Quick Service Restaurant">
+                          Quick Service Restaurant
+                        </option>
                         <option value="Fine Dining">Fine Dining</option>
-                        <option value="Enterprise Retail">Enterprise Retail</option>
+                        <option value="Enterprise Retail">
+                          Enterprise Retail
+                        </option>
                       </select>
                     </FormControl>
                     <FormMessage />
@@ -191,13 +202,15 @@ export function Contact() {
                 name="message"
                 render={({ field }) => (
                   <FormItem className="space-y-2 group">
-                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">Your Message</FormLabel>
+                    <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                      Your Message
+                    </FormLabel>
                     <FormControl>
-                      <textarea 
+                      <textarea
                         {...field}
                         rows={4}
-                        className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface" 
-                        placeholder="Tell us about your operational needs..." 
+                        className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
+                        placeholder="Tell us about your operational needs..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -205,20 +218,31 @@ export function Contact() {
                 )}
               />
 
-              <button 
+              <button
                 type="submit"
                 disabled={isSubmitting}
                 className="w-full py-5 bg-zinc-900 hover:bg-black text-white rounded-xl font-bold text-lg shadow-xl shadow-zinc-200 hover:shadow-primary/20 active:scale-[0.98] transition-all flex justify-center items-center gap-3 disabled:opacity-50"
               >
-                {isSubmitting ? "Processing..." : "Request Your Kinetic Demo"}
-                <span className="material-symbols-outlined icon-filled text-primary">bolt</span>
+                {isSubmitting ? (
+                  <div className="flex items-center gap-2">
+                    <span>Processing...</span>
+                    {/* Optional: Add a small spinner or dots animation */}
+                  </div>
+                ) : (
+                  <>
+                    Request Your Kinetic Demo
+                    <span className="material-symbols-outlined icon-filled text-primary">
+                      bolt
+                    </span>
+                  </>
+                )}
               </button>
             </form>
           </Form>
         </motion.div>
 
         {/* Contact Info & Map (Right Column) */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -228,38 +252,58 @@ export function Contact() {
           <div className="bg-white rounded-3xl p-8 space-y-10 shadow-sm border border-zinc-100">
             <div className="flex gap-6 items-start">
               <div className="bg-primary/10 p-4 rounded-2xl text-primary">
-                <span className="material-symbols-outlined text-3xl icon-filled">phone_in_talk</span>
+                <span className="material-symbols-outlined text-3xl icon-filled">
+                  phone_in_talk
+                </span>
               </div>
               <div>
-                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Call Our Strategists</h4>
-                <p className="text-secondary font-medium tracking-tight">+1 (888) KINETIC-POS</p>
-                <p className="text-zinc-400 text-sm mt-1">Mon-Fri, 8am-8pm EST</p>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
+                  Call Our Strategists
+                </h4>
+                <p className="text-secondary font-medium tracking-tight">
+                  +1 (888) KINETIC-POS
+                </p>
+                <p className="text-zinc-400 text-sm mt-1">
+                  Mon-Fri, 8am-8pm EST
+                </p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="bg-primary/10 p-4 rounded-2xl text-primary">
-                <span className="material-symbols-outlined text-3xl icon-filled">mail</span>
+                <span className="material-symbols-outlined text-3xl icon-filled">
+                  mail
+                </span>
               </div>
               <div>
-                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Email Support</h4>
-                <p className="text-secondary font-medium tracking-tight">accelerate@kineticledger.com</p>
-                <p className="text-zinc-400 text-sm mt-1">Response within 2 hours</p>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
+                  Email Support
+                </h4>
+                <p className="text-secondary font-medium tracking-tight">
+                  accelerate@kineticledger.com
+                </p>
+                <p className="text-zinc-400 text-sm mt-1">
+                  Response within 2 hours
+                </p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
               <div className="bg-primary/10 p-4 rounded-2xl text-primary">
-                <span className="material-symbols-outlined text-3xl icon-filled">location_on</span>
+                <span className="material-symbols-outlined text-3xl icon-filled">
+                  location_on
+                </span>
               </div>
               <div>
-                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">Global HQ</h4>
-                <p className="text-secondary font-medium tracking-tight">42 Velocity Plaza, Suite 100</p>
-                <p className="text-zinc-400 text-sm mt-1">Austin, TX 78701</p>
+                <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
+                  Global HQ
+                </h4>
+
+                <p className="text-zinc-400 text-sm mt-1">Belgaum, Karnataka</p>
               </div>
             </div>
           </div>
 
           {/* Map Component */}
-          <div className="relative group rounded-3xl overflow-hidden shadow-2xl aspect-video lg:aspect-square">
+          {/* <div className="relative group rounded-3xl overflow-hidden shadow-2xl aspect-video lg:aspect-square">
             <img 
               alt="Austin Texas downtown map" 
               className="w-full h-full object-cover grayscale brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-1000 ease-in-out" 
@@ -271,7 +315,7 @@ export function Contact() {
                 <span className="font-bold text-zinc-900">Open in Maps</span>
               </div>
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
 
@@ -279,14 +323,27 @@ export function Contact() {
       <section className="bg-[#141414] py-24 px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-white space-y-4 text-center md:text-left">
-            <h3 className="text-4xl md:text-5xl font-headline font-black">Trusted by 15,000+ Merchants</h3>
-            <p className="text-zinc-400 max-w-lg text-lg">From artisanal bakeries to multi-state retailers, we provide the kinetic energy that drives growth.</p>
+            <h3 className="text-4xl md:text-5xl font-headline font-black">
+              Trusted by 15,000+ Merchants
+            </h3>
+            <p className="text-zinc-400 max-w-lg text-lg">
+              From artisanal bakeries to multi-state retailers, we provide the
+              kinetic energy that drives growth.
+            </p>
           </div>
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-40 grayscale brightness-200 text-white">
-            <span className="material-symbols-outlined text-5xl">storefront</span>
-            <span className="material-symbols-outlined text-5xl">restaurant</span>
-            <span className="material-symbols-outlined text-5xl">shopping_cart</span>
-            <span className="material-symbols-outlined text-5xl">local_cafe</span>
+            <span className="material-symbols-outlined text-5xl">
+              storefront
+            </span>
+            <span className="material-symbols-outlined text-5xl">
+              restaurant
+            </span>
+            <span className="material-symbols-outlined text-5xl">
+              shopping_cart
+            </span>
+            <span className="material-symbols-outlined text-5xl">
+              local_cafe
+            </span>
           </div>
         </div>
       </section>

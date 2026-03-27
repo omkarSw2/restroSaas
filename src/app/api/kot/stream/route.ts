@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect from '@/lib/db/connect';
+import dbConnect from '@/lib/db/mongodb';
 import { Order } from '@/lib/db/models';
 
 export const dynamic = 'force-dynamic';

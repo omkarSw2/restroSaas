@@ -126,7 +126,7 @@ export function Pricing() {
               </p>
               <Link
                 className="mt-8 block rounded-xl kinetic-gradient px-4 py-4 text-center text-base font-bold text-white shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-200 active:scale-95"
-                href="#"
+                href="#contact"
               >
                 Start Free Trial
               </Link>

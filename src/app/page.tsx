@@ -14,18 +14,20 @@ import { Support } from "@/components/landing/Support";
 import { FAQ } from "@/components/landing/FAQ";
 import { CTA } from "@/components/landing/CTA";
 import { Contact } from "@/components/landing/Contact";
+import { SmoothScroll } from "@/components/landing/SmoothScroll";
 import { Footer } from "@/components/landing/Footer";
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
       <Header />
       <main className="pt-16">
         <Hero />
         {/* <TrustedBy /> */}
         <Features />
         <WhyChooseUs />
-        <Hardware />
+        {/* <Hardware /> */}
         {/* <Timeline /> */}
         <Workflow />
         {/* <TeamSection /> */}

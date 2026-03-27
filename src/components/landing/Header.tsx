@@ -11,9 +11,9 @@ export function Header() {
           <Link className="text-zinc-600 hover:text-primary transition-colors duration-200" href="#features">Features</Link>
           <Link className="text-zinc-600 hover:text-primary transition-colors duration-200" href="#pricing">Pricing</Link>
           <Link className="text-zinc-600 hover:text-primary transition-colors duration-200" href="#">Testimonials</Link>
-          <button className="bg-primary text-on-primary px-6 py-2 rounded-xl kinetic-gradient active:scale-95 duration-150 transition-all font-bold">
+          <Link href="#contact" className="bg-primary text-on-primary px-6 py-2 rounded-xl kinetic-gradient active:scale-95 duration-150 transition-all font-bold">
             Get Started
-          </button>
+          </Link>
         </div>
         <button className="md:hidden text-on-surface">
           <span className="material-symbols-outlined">menu</span>
