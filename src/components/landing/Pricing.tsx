@@ -24,7 +24,7 @@ export function Pricing() {
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -32,7 +32,7 @@ export function Pricing() {
           >
             Simple Pricing
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -41,7 +41,7 @@ export function Pricing() {
           >
             Everything you need. One simple price.
           </motion.p>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +54,7 @@ export function Pricing() {
         </div>
 
         <div className="mx-auto max-w-5xl">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -73,10 +73,11 @@ export function Pricing() {
                 The Ultimate Hospitality OS
               </h3>
               <p className="mt-4 text-lg leading-8 text-on-surface-variant font-body">
-                Kinetic Ledger is built specifically for local favorites to simplify daily operations and increase profits.
+                TechResto is built specifically for local favorites to simplify
+                daily operations and increase profits.
               </p>
 
-              <motion.ul 
+              <motion.ul
                 variants={listVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -89,9 +90,13 @@ export function Pricing() {
                   "Advanced Menu Control",
                   "Table & Reservations",
                   "Integrated Loyalty",
-                  "24/7 Priority Support"
+                  "24/7 Priority Support",
                 ].map((feature) => (
-                  <motion.li key={feature} variants={itemVariants} className="flex gap-x-3 items-center">
+                  <motion.li
+                    key={feature}
+                    variants={itemVariants}
+                    className="flex gap-x-3 items-center"
+                  >
                     <span className="material-symbols-outlined text-primary text-[24px]">
                       check_circle
                     </span>
@@ -103,7 +108,7 @@ export function Pricing() {
               </motion.ul>
             </div>
 
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
@@ -115,7 +120,7 @@ export function Pricing() {
               </p>
               <div className="mt-6 flex items-baseline justify-center gap-x-1">
                 <span className="text-5xl lg:text-5xl font-extrabold tracking-tight text-on-surface font-headline">
-                  ₹6,999
+                  ₹5,999
                 </span>
                 <span className="text-sm font-bold leading-6 text-on-surface-variant">
                   /mo
@@ -125,7 +130,7 @@ export function Pricing() {
                 Billed annually
               </p>
               <Link
-                className="mt-8 block rounded-xl kinetic-gradient px-4 py-4 text-center text-base font-bold text-white shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-200 active:scale-95"
+                className="mt-8 block rounded-xl techresto-gradient px-4 py-4 text-center text-base font-bold text-white shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all duration-200 active:scale-95"
                 href="#contact"
               >
                 Start Free Trial

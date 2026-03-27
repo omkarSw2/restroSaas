@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function TeamSection() {
@@ -12,8 +13,10 @@ export function TeamSection() {
         transition={{ duration: 1 }}
         className="rounded-[2.5rem] overflow-hidden relative group shadow-2xl"
       >
-        <img
-          alt="Kinetic Ledger Innovation Lab"
+        <Image
+          alt="TechResto Innovation Lab"
+          width={1200}
+          height={500}
           className="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-1000"
           src="/images/HomeImage01.jpg"
         />

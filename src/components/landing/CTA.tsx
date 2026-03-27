@@ -15,12 +15,12 @@ export function CTA() {
       >
         <div className="relative z-10">
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-on-primary mb-8">Ready to accelerate your ledger?</h2>
-          <p className="text-on-primary text-lg mb-12 max-w-2xl mx-auto opacity-90">Join over 10,000+ businesses running on Kinetic Ledger. Setup takes minutes, impact lasts a lifetime.</p>
+          <p className="text-on-primary text-lg mb-12 max-w-2xl mx-auto opacity-90">Join over 10,000+ businesses running on TechResto. Setup takes minutes, impact lasts a lifetime.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="#contact" className="bg-white text-primary px-10 py-4 rounded-xl font-bold font-headline hover:bg-on-primary transition-all active:scale-95 flex items-center justify-center">
               Start Free Trial
             </Link>
-            <Link href="#contact" className="bg-primary-dim text-white px-10 py-4 rounded-xl font-bold font-headline border border-white/20 hover:bg-primary-dim/80 transition-all kinetic-gradient active:scale-95 flex items-center justify-center">
+            <Link href="#contact" className="bg-primary-dim text-white px-10 py-4 rounded-xl font-bold font-headline border border-white/20 hover:bg-primary-dim/80 transition-all techresto-gradient active:scale-95 flex items-center justify-center">
               Speak to Sales
             </Link>
           </div>

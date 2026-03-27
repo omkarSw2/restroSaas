@@ -17,14 +17,17 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://your-domain.com"),
   title: {
-    default: "Kinetic Ledger - High-Performance POS for Modern Commerce",
-    template: "%s | Kinetic Ledger",
+    default: "TechResto - High-Performance POS for Modern Commerce",
+    template: "%s | TechResto",
   },
   description:
-    "Precision tools for high-velocity growth. Kinetic Ledger provides real-time data and automated infrastructure for modern retail environments.",
-  keywords: ["POS", "Retail POS", "Commerce Infrastructure", "Cloud POS", "Inventory Management", "Kinetic Ledger"],
-  authors: [{ name: "Kinetic Ledger" }],
-  creator: "Kinetic Ledger",
+    "Precision tools for high-velocity growth. TechResto provides real-time data and automated infrastructure for modern retail environments.",
+  keywords: ["POS", "Retail POS", "Commerce Infrastructure", "Cloud POS", "Inventory Management", "TechResto"],
+  authors: [{ name: "TechResto" }],
+  creator: "TechResto",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({

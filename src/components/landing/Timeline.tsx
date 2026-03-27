@@ -6,7 +6,7 @@ const milestones = [
   {
     year: "2018",
     title: "Founded in Austin",
-    description: "Kinetic Ledger was born from a vision to fix broken retail technology in a small studio south of Lady Bird Lake.",
+    description: "TechResto was born from a vision to fix broken retail technology in a small studio south of Lady Bird Lake.",
     offset: false
   },
   {
@@ -35,7 +35,7 @@ export function Timeline() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl text-left">
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-on-surface">The Kinetic Timeline</h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-on-surface">The TechResto Timeline</h2>
             <p className="text-on-surface-variant text-lg leading-relaxed">Tracing our evolution from a garage startup in Austin to a global commerce powerhouse.</p>
           </div>
           <div className="bg-primary/5 px-6 py-3 rounded-full border border-primary/20">

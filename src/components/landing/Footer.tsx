@@ -1,12 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="bg-zinc-900 border-t border-white/5">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 px-8 py-12 max-w-7xl mx-auto font-body text-sm leading-6">
         <div className="col-span-2 md:col-span-1">
-          <div className="text-xl font-bold text-white mb-6 font-headline">
-            Kinetic Ledger
+          <div className="mb-6">
+            <Image
+              src="/TechRestoFooterLogo1.png"
+              alt="TechResto Logo"
+              width={160}
+              height={40}
+              className="h-10 w-auto"
+            />
           </div>
           <p className="text-zinc-400 mb-6">
             High-performance point of sale for the next generation of commerce.
@@ -138,7 +145,7 @@ export function Footer() {
       </div>
       <div className="px-8 py-6 border-t border-zinc-800 text-center max-w-7xl mx-auto">
         <p className="text-zinc-500 text-xs italic opacity-80">
-          © 2024 Kinetic Ledger POS. All rights reserved.
+          © 2024 TechResto POS. All rights reserved.
         </p>
       </div>
     </footer>

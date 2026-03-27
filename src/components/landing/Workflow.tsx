@@ -11,7 +11,7 @@ export function Workflow() {
             Streamline Your Operations
           </h2>
           <p className="text-zinc-400 text-lg leading-relaxed">
-            Kinetic Ledger bridges the gap between Front-of-House and Kitchen,
+            TechResto bridges the gap between Front-of-House and Kitchen,
             reducing ticket times by 40% on average.
           </p>
         </div>

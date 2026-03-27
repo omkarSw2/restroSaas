@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export function Hardware() {
@@ -13,9 +14,11 @@ export function Hardware() {
           transition={{ duration: 0.6 }}
           className="order-2 lg:order-1 relative"
         >
-          <img 
-            alt="Kinetic Terminal" 
-            className="rounded-2xl shadow-xl w-full" 
+          <Image 
+            alt="TechResto Terminal" 
+            width={800}
+            height={600}
+            className="rounded-2xl shadow-xl w-full h-auto" 
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr_2RhoX3-zCHaT8EcXmFJUL6_pD0ZyTEw2b7P3JHSUqO_4Bk1_BUSWrqXStGZqLRtHoEffE_Ik_ymH12nLiTbMBOHwMmEoOR-NHDOqdftzBbFbX-59DyTAD9JzJQnn7sCgh2O0w7MsL4RK8i_kru3VAbZgmOFO4OJBFtgq9WCPiu_W9eW25_nKp0ASVkVpFljYHkmZ73mZ0DXdlm32Ov9SfYKInuTSSmazat3BCMS6WSlaW1mZkI5-vmJQcgGfmkhZzHvK6TJd7A"
           />
           {/* Overlapping Detail Card */}

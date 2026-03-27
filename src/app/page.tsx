@@ -31,7 +31,7 @@ export default function Home() {
         {/* <Timeline /> */}
         <Workflow />
         {/* <TeamSection /> */}
-        <HowItWorks />
+        {/* <HowItWorks /> */}
         {/* <ROICalculator /> */}
         <Pricing />
         <Support />

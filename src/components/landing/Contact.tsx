@@ -30,6 +30,8 @@ export function Contact() {
     defaultValues: {
       fullName: "",
       email: "",
+      businessName: "",
+      phoneNumber: "",
       businessType: "",
       message: "",
     },
@@ -89,7 +91,7 @@ export function Contact() {
             className="max-w-2xl text-xl text-secondary font-medium leading-relaxed"
           >
             Ready to accelerate your commerce? Our team is standing by to build
-            your custom Kinetic experience.
+            your custom TechResto experience.
           </motion.p>
         </div>
         {/* Decorative background elements */}
@@ -168,6 +170,54 @@ export function Contact() {
                 />
               </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="businessName"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2 group">
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                        Restaurant Name
+                      </FormLabel>
+                      <FormControl>
+                        <input
+                          {...field}
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
+                          placeholder="Savory Garden"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phoneNumber"
+                  render={({ field }) => (
+                    <FormItem className="space-y-2 group">
+                      <FormLabel className="font-label text-xs font-bold uppercase tracking-widest text-secondary group-focus-within:text-primary transition-colors">
+                        Phone Number
+                      </FormLabel>
+                      <FormControl>
+                        <input
+                          {...field}
+                          type="tel"
+                          maxLength={10}
+                          onKeyPress={(e) => {
+                            if (!/[0-9]/.test(e.key)) {
+                              e.preventDefault();
+                            }
+                          }}
+                          className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
+                          placeholder="9876543210"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+
               <FormField
                 control={form.control}
                 name="businessType"
@@ -230,7 +280,7 @@ export function Contact() {
                   </div>
                 ) : (
                   <>
-                    Request Your Kinetic Demo
+                    Request Your TechResto Demo
                     <span className="material-symbols-outlined icon-filled text-primary">
                       bolt
                     </span>
@@ -261,7 +311,7 @@ export function Contact() {
                   Call Our Strategists
                 </h4>
                 <p className="text-secondary font-medium tracking-tight">
-                  +1 (888) KINETIC-POS
+                  +1 (888) TECH-RESTO
                 </p>
                 <p className="text-zinc-400 text-sm mt-1">
                   Mon-Fri, 8am-8pm EST
@@ -279,7 +329,7 @@ export function Contact() {
                   Email Support
                 </h4>
                 <p className="text-secondary font-medium tracking-tight">
-                  accelerate@kineticledger.com
+                  hello@techresto.com
                 </p>
                 <p className="text-zinc-400 text-sm mt-1">
                   Response within 2 hours
@@ -320,7 +370,7 @@ export function Contact() {
       </div>
 
       {/* Social Proof Section */}
-      <section className="bg-[#141414] py-24 px-8">
+      {/* <section className="bg-[#141414] py-24 px-8">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
           <div className="text-white space-y-4 text-center md:text-left">
             <h3 className="text-4xl md:text-5xl font-headline font-black">
@@ -328,7 +378,7 @@ export function Contact() {
             </h3>
             <p className="text-zinc-400 max-w-lg text-lg">
               From artisanal bakeries to multi-state retailers, we provide the
-              kinetic energy that drives growth.
+              TechResto energy that drives growth.
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-40 grayscale brightness-200 text-white">
@@ -346,7 +396,7 @@ export function Contact() {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
     </section>
   );
 }

@@ -17,7 +17,7 @@ export async function submitContactForm(data: ContactFormValues) {
     };
   }
 
-  const { fullName, email, businessType, message } = validatedFields.data;
+  const { fullName, email, businessName, phoneNumber, businessType, message } = validatedFields.data;
 
   try {
     console.time("submitContactForm-db-connect");
@@ -30,6 +30,8 @@ export async function submitContactForm(data: ContactFormValues) {
     await Contact.create({
       fullName,
       email,
+      businessName,
+      phoneNumber,
       businessType,
       message,
     });
@@ -43,8 +45,8 @@ export async function submitContactForm(data: ContactFormValues) {
         await resend.emails.send({
           from: "Acme <onboarding@resend.dev>",
           to: ["delivered@resend.dev"], // Replace with actual recipient
-          subject: `New Lead: ${businessType || fullName}`,
-          text: `Name: ${fullName}\nEmail: ${email}\nBusiness Type: ${businessType}\nMessage: ${message}`,
+          subject: `New Lead: ${businessName || businessType || fullName}`,
+          text: `Name: ${fullName}\nEmail: ${email}\nBusiness Name: ${businessName}\nPhone: ${phoneNumber}\nBusiness Type: ${businessType}\nMessage: ${message}`,
         });
       } catch (emailErr) {
         console.error("Email send error (swallowed):", emailErr);

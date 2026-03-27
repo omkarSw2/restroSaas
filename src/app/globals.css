@@ -125,7 +125,7 @@ html {
   background-image: linear-gradient(to right, #ea580c, #fb923c);
 }
 
-@utility kinetic-gradient {
+@utility techresto-gradient {
   background: linear-gradient(135deg, #9e3c00 0%, #ff7936 100%);
 }
 
