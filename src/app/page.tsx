@@ -2,6 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { TrustedBy } from "@/components/landing/TrustedBy";
 import { Features } from "@/components/landing/Features";
+import { ZigZagFeatures } from "@/components/landing/ZigZagFeatures";
 import { WhyChooseUs } from "@/components/landing/WhyChooseUs";
 import { Hardware } from "@/components/landing/Hardware";
 import { Timeline } from "@/components/landing/Timeline";
@@ -26,6 +27,7 @@ export default function Home() {
         <Hero />
         {/* <TrustedBy /> */}
         <Features />
+        <ZigZagFeatures />
         <WhyChooseUs />
         {/* <Hardware /> */}
         {/* <Timeline /> */}
