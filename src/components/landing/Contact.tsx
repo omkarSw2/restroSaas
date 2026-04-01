@@ -140,6 +140,8 @@ export function Contact() {
                       <FormControl>
                         <input
                           {...field}
+                          autoComplete="name"
+                          aria-required="true"
                           className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
                           placeholder="John Doe"
                         />
@@ -160,6 +162,8 @@ export function Contact() {
                         <input
                           {...field}
                           type="email"
+                          autoComplete="email"
+                          aria-required="true"
                           className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"
                           placeholder="john@business.com"
                         />
@@ -202,6 +206,8 @@ export function Contact() {
                         <input
                           {...field}
                           type="tel"
+                          autoComplete="tel"
+                          aria-required="true"
                           maxLength={10}
                           onKeyPress={(e) => {
                             if (!/[0-9]/.test(e.key)) {
