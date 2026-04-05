@@ -19,7 +19,7 @@ const itemVariants: Variants = {
 export function Pricing() {
   return (
     <section
-      className="py-24 bg-surface text-on-surface relative overflow-hidden"
+      className="py-10 bg-surface text-on-surface relative overflow-hidden"
       id="pricing"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">

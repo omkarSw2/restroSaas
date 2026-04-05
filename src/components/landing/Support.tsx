@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function Support() {
   return (
-    <section className="py-24 bg-surface">
+    <section className="py-10 bg-surface">
       <div className="max-w-7xl mx-auto px-8">
         <div className="bg-surface-container-lowest rounded-3xl p-12 lg:p-20 shadow-sm grid lg:grid-cols-2 gap-16 items-center border border-outline-variant/10">
           <motion.div

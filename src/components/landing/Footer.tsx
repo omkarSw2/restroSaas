@@ -119,7 +119,7 @@ export function Footer() {
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
+                href="/privacy-policy"
               >
                 Privacy Policy
               </Link>
@@ -127,7 +127,7 @@ export function Footer() {
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
+                href="/terms-of-service"
               >
                 Terms of Service
               </Link>

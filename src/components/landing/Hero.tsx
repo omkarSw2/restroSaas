@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <>
       {/* Primary Hero Section */}
-      <section className="relative px-8 py-24 max-w-7xl mx-auto overflow-hidden">
+      <section className="relative px-8 py-10 max-w-7xl mx-auto overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -16,13 +16,13 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="z-10"
           >
-            <span className="inline-block py-1 px-4 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-6">
+            {/* <span className="inline-block py-1 px-4 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-6">
               The Future of Commerce
-            </span>
-            <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
-              Retail Without{" "}
-              <span className="text-primary italic"> Limit</span> <br />
-              Starts Here!.
+            </span> */}
+            <h1 className="font-headline  py-1 text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
+              Retail Without <span className="text-primary italic"> Limit</span>{" "}
+              <br />
+              Starts Here!
             </h1>
             <p className="text-lg text-secondary leading-relaxed max-w-xl mb-10">
               Imagine a system that adapts to your business, scales with your

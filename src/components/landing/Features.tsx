@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function Features() {
   return (
-    <section className="py-24 max-w-7xl mx-auto px-8" id="features">
+    <section className="py-10 max-w-7xl mx-auto px-8" id="features">
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Feature 1: Easy Billing */}
         <motion.div
@@ -73,8 +73,7 @@ export function Features() {
             Inventory Control
           </h3>
           <p className="text-white/90 leading-relaxed text-lg">
-            Real-time stock tracking with low-inventory alerts and automated
-            supplier reordering.
+            Keep your menu always available by enabling or disabling items based on available ingredients and supplier support.
           </p>
         </motion.div>
 

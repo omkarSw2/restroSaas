@@ -84,7 +84,7 @@ export function Header() {
                 className="w-full py-4 bg-primary text-on-primary rounded-xl text-center font-bold text-xl techresto-gradient"
                 onClick={() => setIsOpen(false)}
               >
-                Book Demo
+                Book a Demo
               </Link>
             </div>
           </motion.div>
