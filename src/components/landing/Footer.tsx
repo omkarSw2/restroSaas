@@ -46,7 +46,7 @@ export function Footer() {
                 Features
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="#"
@@ -61,7 +61,7 @@ export function Footer() {
               >
                 Integrations
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
@@ -85,14 +85,14 @@ export function Footer() {
                 About Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="#"
               >
                 Careers
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
@@ -129,7 +129,7 @@ export function Footer() {
                 className="text-zinc-400 hover:text-white transition-colors"
                 href="/terms-of-service"
               >
-                Terms of Service
+                Terms of Conditions
               </Link>
             </li>
             <li>

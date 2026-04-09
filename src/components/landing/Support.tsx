@@ -48,9 +48,12 @@ export function Support() {
                 </span>
               </li>
             </ul>
-            <button className="bg-zinc-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-black transition-all">
+            <a
+              href="mailto:contact@techresto.com?subject=Support%20Request%20-%20TechResto"
+              className="inline-block bg-zinc-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-black transition-all text-center"
+            >
               Contact Support
-            </button>
+            </a>
           </motion.div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -70,7 +73,7 @@ export function Support() {
               transition={{ duration: 0.6, delay: 0.4 }}
               alt="Team Handshake"
               className="rounded-2xl h-64 w-full object-cover mt-12 shadow-lg"
-              src="images/handShake.svg"
+              src="/images/handshake.svg"
             />
           </div>
         </div>

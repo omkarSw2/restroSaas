@@ -71,7 +71,7 @@ export function Contact() {
   }
 
   return (
-    <section className="bg-background pt-24" id="contact">
+    <section className="bg-background " id="contact">
       {/* Hero Header */}
       <div className="relative py-20 px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
@@ -317,7 +317,7 @@ export function Contact() {
                   Call Our Strategists
                 </h4>
                 <p className="text-secondary font-medium tracking-tight">
-                  +1 (888) TECH-RESTO
+                  +91 87479 13421
                 </p>
                 <p className="text-zinc-400 text-sm mt-1">
                   Mon-Fri, 8am-8pm EST
@@ -335,7 +335,7 @@ export function Contact() {
                   Email Support
                 </h4>
                 <p className="text-secondary font-medium tracking-tight">
-                  hello@techresto.com
+                  contact@techresto.com
                 </p>
                 <p className="text-zinc-400 text-sm mt-1">
                   Response within 2 hours
@@ -350,7 +350,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
-                  Global HQ
+                  Headquarters
                 </h4>
 
                 <p className="text-zinc-400 text-sm mt-1">Belgaum, Karnataka</p>

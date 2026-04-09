@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function Workflow() {
   return (
@@ -24,12 +25,15 @@ export function Workflow() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-zinc-800 rounded-3xl p-4 shadow-2xl border border-zinc-700"
+            className="bg-zinc-800 rounded-3xl p-4 shadow-2xl border border-zinc-700 overflow-hidden"
           >
-            <img
+            <Image
+              src="/images/operationsImage01.jpg"
               alt="Kitchen Display System"
+              width={1200}
+              height={800}
               className="w-full h-auto rounded-2xl"
-              src="images/OperationsImage01.jpg"
+              priority
             />
           </motion.div>
 
