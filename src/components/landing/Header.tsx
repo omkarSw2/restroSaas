@@ -24,7 +24,7 @@ export function Header() {
           onClick={() => setIsOpen(false)}
         >
           <Image
-            src="/TechRestoPOSLogo.png"
+            src="/TechRestoPOSLogo.svg"
             alt="TechResto Logo"
             width={200}
             height={100}

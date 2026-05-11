@@ -8,7 +8,7 @@ export function Footer() {
         <div className="col-span-2 md:col-span-1">
           <div className="mb-6">
             <Image
-              src="/TechRestoFooterLogo1.png"
+              src="/TechRestoFooterLogo1.svg"
               alt="TechResto Logo"
               width={160}
               height={40}

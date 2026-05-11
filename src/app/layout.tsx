@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
@@ -15,7 +15,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://techresto.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_APP_URL || "https://techresto.com",
+  ),
   title: {
     default: "TechResto - High-Performance Restaurant POS & Management System",
     template: "%s | TechResto",
@@ -41,7 +43,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "TechResto - High-Performance Restaurant POS",
-    description: "The ultimate hospitality OS for modern restaurants and retail.",
+    description:
+      "The ultimate hospitality OS for modern restaurants and retail.",
     url: "https://techresto.com",
     siteName: "TechResto",
     images: [
@@ -74,9 +77,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.png",
+    icon: [{ url: "/favicon.png", type: "image/png" }],
     shortcut: "/favicon.png",
-    apple: "/apple-touch-icon.png",
+    apple: "/favicon.png",
   },
   manifest: "/site.webmanifest",
 };
@@ -94,9 +97,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body
-        className="font-body antialiased overflow-x-hidden bg-background text-on-surface"
-      >
+      <body className="font-body antialiased overflow-x-hidden bg-background text-on-surface">
         {children}
       </body>
     </html>
