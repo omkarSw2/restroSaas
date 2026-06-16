@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { trackCTAClick } from "@/utils/analytics";
 
 export function CTA() {
   return (
@@ -24,6 +25,7 @@ export function CTA() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="#contact"
+              onClick={() => trackCTAClick("Start Free Trial", "Middle CTA Section")}
               className="bg-white text-primary px-10 py-4 rounded-xl font-bold font-headline hover:bg-on-primary transition-all active:scale-95 flex items-center justify-center"
             >
               Start Free Trial

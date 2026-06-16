@@ -17,6 +17,11 @@ import {
   contactFormSchema,
   ContactFormValues,
 } from "@/lib/validations/contact";
+import {
+  trackFormStart,
+  trackLeadSubmission,
+  trackFormError,
+} from "@/utils/analytics";
 
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,6 +29,7 @@ export function Contact() {
     success: boolean;
     message: string;
   } | null>(null);
+  const [formStarted, setFormStarted] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -37,6 +43,13 @@ export function Contact() {
     },
   });
 
+  const handleFormStart = () => {
+    if (!formStarted) {
+      setFormStarted(true);
+      trackFormStart("contact_demo_form");
+    }
+  };
+
   async function onSubmit(data: ContactFormValues) {
     setIsSubmitting(true);
     setSubmitStatus(null);
@@ -45,7 +58,9 @@ export function Contact() {
       const result = await submitContactForm(data);
       if (result.success) {
         setSubmitStatus({ success: true, message: result.message });
+        trackLeadSubmission(data.businessName || "", data.businessType || "", data.email);
         form.reset();
+        setFormStarted(false); // Reset form started tracking state for next submission
       } else {
         setSubmitStatus({
           success: false,
@@ -58,6 +73,8 @@ export function Contact() {
                 type: "server",
                 message: messages[0],
               });
+              // Track form validation error
+              trackFormError(key, messages[0], "contact_demo_form");
             }
           });
         }
@@ -65,6 +82,7 @@ export function Contact() {
     } catch (err) {
       console.error(err);
       setSubmitStatus({ success: false, message: "A network error occurred." });
+      trackFormError("network", "A network error occurred", "contact_demo_form");
     } finally {
       setIsSubmitting(false);
     }
@@ -140,6 +158,7 @@ export function Contact() {
                       <FormControl>
                         <input
                           {...field}
+                          onFocus={handleFormStart}
                           autoComplete="name"
                           aria-required="true"
                           className="w-full bg-surface border-transparent focus:border-primary focus:ring-0 rounded-xl p-4 font-body transition-all outline-none border-2 text-on-surface"

@@ -119,6 +119,14 @@ export function Footer() {
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
+                href="/terms-of-service"
+              >
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-zinc-400 hover:text-white transition-colors"
                 href="/privacy-policy"
               >
                 Privacy Policy
@@ -127,17 +135,17 @@ export function Footer() {
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="/terms-of-service"
+                href="/refund-policy"
               >
-                Terms of Conditions
+                Cancellation & Refund Policy
               </Link>
             </li>
             <li>
               <Link
                 className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
+                href="/data-processing-agreement"
               >
-                Security
+                Data Processing Agreement
               </Link>
             </li>
           </ul>

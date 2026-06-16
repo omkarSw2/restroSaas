@@ -4,15 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { trackCTAClick } from "@/utils/analytics";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Home", href: "#" },
-    { name: "About Us", href: "#about" },
-    { name: "Features", href: "#features" },
-    { name: "Plans", href: "#pricing" },
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/#about" },
+    { name: "Features", href: "/#features" },
+    { name: "Plans", href: "/#pricing" },
   ];
 
   return (
@@ -43,7 +44,8 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="/#contact"
+            onClick={() => trackCTAClick("Book Demo", "Header Desktop")}
             className="bg-primary text-on-primary px-6 py-2 rounded-xl techresto-gradient active:scale-95 duration-150 transition-all font-bold"
           >
             Book Demo
@@ -80,9 +82,12 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/#contact"
                 className="w-full py-4 bg-primary text-on-primary rounded-xl text-center font-bold text-xl techresto-gradient"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  trackCTAClick("Book Demo", "Header Mobile");
+                }}
               >
                 Book a Demo
               </Link>
