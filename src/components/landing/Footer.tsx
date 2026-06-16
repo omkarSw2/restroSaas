@@ -20,16 +20,16 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             <Link
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="w-10 h-10 rounded-full bg-zinc-800/50 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary/50 hover:bg-primary/5 hover:scale-110 active:scale-95 transition-all duration-200"
               href="#"
             >
-              <span className="material-symbols-outlined">public</span>
+              <span className="material-symbols-outlined text-xl">public</span>
             </Link>
             <Link
-              className="text-zinc-400 hover:text-white transition-colors"
+              className="w-10 h-10 rounded-full bg-zinc-800/50 border border-white/5 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary/50 hover:bg-primary/5 hover:scale-110 active:scale-95 transition-all duration-200"
               href="#"
             >
-              <span className="material-symbols-outlined">alternate_email</span>
+              <span className="material-symbols-outlined text-xl">alternate_email</span>
             </Link>
           </div>
         </div>
@@ -40,31 +40,15 @@ export function Footer() {
           <ul className="space-y-2">
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="#features"
               >
                 Features
               </Link>
             </li>
-            {/* <li>
-              <Link
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
-              >
-                Hardware
-              </Link>
-            </li>
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
-              >
-                Integrations
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="#pricing"
               >
                 Pricing
@@ -79,23 +63,15 @@ export function Footer() {
           <ul className="space-y-2">
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="#"
               >
                 About Us
               </Link>
             </li>
-            {/* <li>
-              <Link
-                className="text-zinc-400 hover:text-white transition-colors"
-                href="#"
-              >
-                Careers
-              </Link>
-            </li> */}
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="#"
               >
                 Partners
@@ -103,7 +79,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="#"
               >
                 Contact
@@ -118,7 +94,7 @@ export function Footer() {
           <ul className="space-y-2">
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="/terms-of-service"
               >
                 Terms of Service
@@ -126,7 +102,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="/privacy-policy"
               >
                 Privacy Policy
@@ -134,7 +110,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="/refund-policy"
               >
                 Cancellation & Refund Policy
@@ -142,7 +118,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                className="text-zinc-400 hover:text-white transition-colors"
+                className="text-zinc-300 hover:text-primary transition-colors"
                 href="/data-processing-agreement"
               >
                 Data Processing Agreement

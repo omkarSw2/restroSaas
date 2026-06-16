@@ -19,7 +19,7 @@ export function Hero() {
             {/* <span className="inline-block py-1 px-4 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-6">
               The Future of Commerce
             </span> */}
-            <h1 className="font-headline  py-1 text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
+            <h1 className="font-headline py-1 text-4xl sm:text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
               Retail Without <span className="text-primary italic"> Limit</span>{" "}
               <br />
               Starts Here!

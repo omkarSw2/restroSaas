@@ -65,7 +65,7 @@ export function FAQ() {
                   value={`item-${index}`}
                   className="border-b border-white/5 pb-4 outline-none"
                 >
-                  <AccordionTrigger className="text-xl font-bold leading-7 text-white hover:no-underline hover:text-primary transition-colors [&[data-state=open]>span:last-child]:rotate-180 font-headline py-4">
+                  <AccordionTrigger className="text-xl font-bold leading-7 text-white hover:no-underline hover:text-primary transition-colors [&[data-state=open]>span:last-child]:rotate-180 font-headline py-4 [&>svg]:hidden">
                     <span className="text-left flex-1">{faq.question}</span>
                     <span className="ml-6 flex h-7 items-center transition-transform duration-300">
                       <span className="material-symbols-outlined text-primary group-data-[state=open]:rotate-180">

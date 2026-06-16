@@ -5,14 +5,18 @@ import { motion } from "framer-motion";
 
 export function Features() {
   return (
-    <section className="py-10 max-w-7xl mx-auto px-8" id="features">
+    <section className="py-10 max-w-7xl mx-auto px-8 relative" id="features">
+      {/* Premium Glassmorphism Background Glow Accents */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
       <div className="grid lg:grid-cols-3 gap-8">
         {/* Feature 1: Easy Billing */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="lg:col-span-2 p-10 bg-surface-container-lowest rounded-xl shadow-sm border-b-4 border-primary group hover:-translate-y-1 transition-transform"
+          className="lg:col-span-2 p-10 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-xl rounded-xl shadow-md border border-white/40 dark:border-white/10 border-b-4 border-b-primary group hover:-translate-y-1 transition-all duration-300 hover:shadow-xl"
         >
           <div className="flex items-start justify-between mb-12">
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
@@ -20,7 +24,6 @@ export function Features() {
                 receipt_long
               </span>
             </div>
-            {/* <span className="text-surface-container-highest font-headline text-6xl font-black">01</span> */}
           </div>
           <h3 className="font-headline text-3xl font-bold mb-4 text-on-surface">
             Easy Billing
@@ -36,14 +39,14 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-10 bg-[#141414] text-white rounded-xl shadow-sm relative overflow-hidden group hover:-translate-y-1 transition-transform"
+          className="p-10 bg-black/80 text-white backdrop-blur-xl rounded-xl shadow-md border border-white/5 relative overflow-hidden group hover:-translate-y-1 transition-all duration-300 hover:shadow-xl"
         >
           <div className="absolute top-0 right-0 p-4 opacity-20 text-white">
             <span className="material-symbols-outlined text-9xl">stars</span>
           </div>
           <div className="relative z-10">
             <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-orange-500 mb-12">
-              <span className="material-symbols-outlined text-4xl">
+              <span className="material-symbols-outlined text-4xl icon-filled">
                 loyalty
               </span>
             </div>
@@ -62,7 +65,7 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="p-10 techresto-gradient rounded-xl shadow-sm group hover:-translate-y-1 transition-transform"
+          className="p-10 techresto-gradient rounded-xl shadow-md group hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
         >
           <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-12">
             <span className="material-symbols-outlined text-4xl">
@@ -82,7 +85,7 @@ export function Features() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="lg:col-span-2 p-10 bg-surface-container-high rounded-xl shadow-sm flex flex-col md:flex-row gap-8 items-center group hover:-translate-y-1 transition-transform text-on-surface"
+          className="lg:col-span-2 p-10 bg-zinc-200/40 dark:bg-zinc-800/40 backdrop-blur-xl rounded-xl shadow-md border border-white/20 dark:border-white/5 flex flex-col md:flex-row gap-8 items-center group hover:-translate-y-1 transition-all duration-300 hover:shadow-xl text-on-surface"
         >
           <div className="flex-1">
             <h3 className="font-headline text-3xl font-bold mb-4">
@@ -100,14 +103,14 @@ export function Features() {
               <span className="material-symbols-outlined">arrow_forward</span>
             </Link>
           </div>
-          <div className="flex-1 bg-white p-6 rounded-xl shadow-lg rotate-1">
+          <div className="flex-1 bg-white dark:bg-zinc-900 p-6 rounded-xl shadow-lg rotate-1 border border-zinc-100 dark:border-zinc-800">
             <div className="flex gap-2 mb-4">
               <div className="h-24 flex-1 bg-primary/20 rounded-t-lg"></div>
               <div className="h-32 flex-1 bg-primary/40 rounded-t-lg"></div>
               <div className="h-40 flex-1 bg-primary rounded-t-lg"></div>
               <div className="h-28 flex-1 bg-primary/60 rounded-t-lg"></div>
             </div>
-            <div className="flex justify-between text-[10px] font-bold text-zinc-400 uppercase">
+            <div className="flex justify-between text-[10px] font-bold text-zinc-400 dark:text-zinc-500 uppercase">
               <span>Mon</span>
               <span>Tue</span>
               <span>Wed</span>

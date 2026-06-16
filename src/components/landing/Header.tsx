@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,6 +8,15 @@ import { trackCTAClick } from "@/utils/analytics";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { name: "Home", href: "/" },
@@ -17,8 +26,12 @@ export function Header() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
-      <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-headline font-semibold tracking-tight">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled 
+        ? "bg-white/95 shadow-md py-2 dark:bg-zinc-950/95 border-b border-zinc-100 dark:border-zinc-800" 
+        : "bg-white/80 backdrop-blur-xl shadow-sm py-4 dark:bg-zinc-950/80"
+    }`}>
+      <div className="flex justify-between items-center px-8 max-w-7xl mx-auto font-headline font-semibold tracking-tight">
         <Link
           href="/"
           className="flex items-center gap-2"
@@ -51,14 +64,23 @@ export function Header() {
             Book Demo
           </Link>
         </div>
-        <button
-          className="md:hidden text-on-surface z-50"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="material-symbols-outlined text-3xl">
-            {isOpen ? "close" : "menu"}
-          </span>
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <Link
+            href="/#contact"
+            onClick={() => trackCTAClick("Book Demo", "Header Mobile Sticky")}
+            className="bg-primary text-on-primary px-4 py-2 rounded-xl techresto-gradient active:scale-95 duration-150 transition-all font-bold text-sm"
+          >
+            Book Demo
+          </Link>
+          <button
+            className="text-on-surface z-50 p-1 flex items-center justify-center"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <span className="material-symbols-outlined text-3xl">
+              {isOpen ? "close" : "menu"}
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Overlay */}

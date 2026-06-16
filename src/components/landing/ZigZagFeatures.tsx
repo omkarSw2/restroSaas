@@ -97,7 +97,7 @@ export function ZigZagFeatures() {
                 {feature.cta && (
                   <Link
                     href={feature.href}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-on-primary rounded-full font-bold hover:bg-primary/90 hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3 techresto-gradient text-on-primary rounded-full font-bold hover:gap-3 hover:shadow-lg hover:shadow-primary/20 active:scale-95 transition-all duration-200"
                   >
                     {feature.cta}
                     <span className="material-symbols-outlined">arrow_forward</span>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import GoogleTagManager from "@/components/analytics/GoogleTagManager";
 
@@ -9,51 +9,51 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const manrope = Manrope({
+const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-manrope",
+  variable: "--font-outfit",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://techresto.com",
+    process.env.NEXT_PUBLIC_APP_URL || "https://www.techrestopos.com",
   ),
   title: {
-    default: "TechResto - High-Performance Restaurant POS & Management System",
-    template: "%s | TechResto",
+    default: "techrestoPOS - High-Performance Restaurant POS & Management System",
+    template: "%s | techrestoPOS",
   },
   description:
-    "TechResto provides the ultimate hospitality OS for modern restaurants, cafes, and retail. Streamline billing, inventory, and loyalty with real-time insights.",
+    "techrestoPOS by Techcardz is a high-performance, cloud-based restaurant POS and billing management software for cafes, QSRs, and fine dining. Manage billing, inventory, QR ordering, and loyalty seamlessly.",
   keywords: [
     "Restaurant POS",
     "Cloud POS",
     "Inventory Management",
     "Restaurant Management System",
-    "TechResto",
+    "techrestoPOS",
     "Billing Software",
     "Hospitality OS",
   ],
-  authors: [{ name: "TechResto Team", url: "https://techresto.com" }],
-  creator: "TechResto Corporation",
-  publisher: "TechResto Corporation",
+  authors: [{ name: "techrestoPOS Team", url: "https://www.techrestopos.com" }],
+  creator: "Techcardz Services Private Limited",
+  publisher: "Techcardz Services Private Limited",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "TechResto - High-Performance Restaurant POS",
+    title: "techrestoPOS - High-Performance Restaurant POS",
     description:
       "The ultimate hospitality OS for modern restaurants and retail.",
-    url: "https://techresto.com",
-    siteName: "TechResto",
+    url: "https://www.techrestopos.com",
+    siteName: "techrestoPOS",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TechResto POS Dashboard",
+        alt: "techrestoPOS Dashboard",
       },
     ],
     locale: "en_IN",
@@ -61,10 +61,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TechResto - Restaurant Management Simplified",
-    description: "Steamline your restaurant operations with TechResto POS.",
+    title: "techrestoPOS - Restaurant Management Simplified",
+    description: "Steamline your restaurant operations with techrestoPOS.",
     images: ["/og-image.png"],
-    creator: "@techresto",
+    creator: "@techrestopos",
   },
   robots: {
     index: true,
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "TechResto",
+  "name": "techrestoPOS",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "iOS, Android, Windows, Web Browser",
   "offers": {
@@ -111,11 +111,11 @@ const softwareSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "TechResto",
-  "url": "https://techresto.com",
-  "logo": "https://techresto.com/favicon.png",
+  "name": "techrestoPOS",
+  "url": "https://www.techrestopos.com",
+  "logo": "https://www.techrestopos.com/favicon.png",
   "sameAs": [
-    "https://twitter.com/techresto"
+    "https://twitter.com/techrestopos"
   ]
 };
 
@@ -172,10 +172,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
           rel="stylesheet"
         />
         {/* Load Google Tag Manager optimized container script */}
