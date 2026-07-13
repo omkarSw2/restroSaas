@@ -16,11 +16,11 @@ export function CTA() {
       >
         <div className="relative z-10">
           <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-on-primary mb-8">
-            Ready to accelerate your ledger?
+            Ready to run a smoother restaurant?
           </h2>
           <p className="text-on-primary text-lg mb-12 max-w-2xl mx-auto opacity-90">
-            Join the growing family of restaurants running on TechResto. Setup takes
-            minutes, impact lasts a lifetime.
+            Join the growing family of restaurants running on TechResto —
+            we&apos;ll have you billing within 48 hours.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link

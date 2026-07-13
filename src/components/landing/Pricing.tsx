@@ -85,12 +85,12 @@ export function Pricing() {
                 className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-y-5 gap-x-6 text-base leading-6 text-on-surface-variant"
               >
                 {[
-                  "Unlimited POS Terminals",
-                  "Multi-Location Sync",
+                  "Works on Unlimited Devices",
+                  "Multi-Outlet Management",
                   "Advanced Menu Control",
-                  "Table & Reservations",
+                  "Tables & Reservations",
                   "Integrated Loyalty",
-                  "24/7 Priority Support",
+                  "Priority Support & Onboarding",
                 ].map((feature) => (
                   <motion.li
                     key={feature}

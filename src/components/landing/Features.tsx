@@ -29,9 +29,9 @@ export function Features() {
             Easy Billing
           </h3>
           <p className="text-on-surface-variant leading-relaxed text-lg max-w-md">
-            Lightning-fast billing for dine-in, takeaway, and delivery — with
-            offers, happy-hour pricing, and GST-ready invoices. Designed for
-            peak-hour chaos.
+            Bill dine-in, takeaway, and delivery orders in seconds — with
+            offers, happy-hour pricing, and GST-ready invoices built in. Made
+            for the lunch rush.
           </p>
         </motion.div>
 
@@ -55,8 +55,9 @@ export function Features() {
               Loyalty Tools
             </h3>
             <p className="text-zinc-400 leading-relaxed text-lg">
-              Automated rewards that keep customers coming back. Integrated
-              directly into the checkout flow.
+              Turn first-time visitors into regulars. Points are earned
+              automatically at checkout and redeemed with a quick OTP — no
+              cards, no extra apps.
             </p>
           </div>
         </motion.div>
@@ -77,7 +78,8 @@ export function Features() {
             Inventory Control
           </h3>
           <p className="text-white/90 leading-relaxed text-lg">
-            Keep your menu always available by enabling or disabling items based on available ingredients and supplier support.
+            Track ingredients, recipes, and stock in real time — and know
+            what&apos;s running low before your kitchen does.
           </p>
         </motion.div>
 
@@ -93,8 +95,8 @@ export function Features() {
               Live Insights
             </h3>
             <p className="text-on-surface-variant leading-relaxed text-lg mb-6">
-              Visual dashboards that show you exactly what&apos;s selling and
-              when, accessible from any device.
+              Today&apos;s sales, top-selling items, and repeat customers at a
+              glance — from your phone, tablet, or laptop.
             </p>
             <Link
               className="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all"

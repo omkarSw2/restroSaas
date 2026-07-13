@@ -45,7 +45,8 @@ export function Workflow() {
               <div>
                 <h4 className="font-bold text-xl mb-2">Order Entry</h4>
                 <p className="text-zinc-400 text-sm">
-                  Lightning fast selection and modifiers.
+                  Take orders in seconds with quick item search — at the
+                  counter, table, or via QR.
                 </p>
               </div>
             </div>
@@ -56,7 +57,8 @@ export function Workflow() {
               <div>
                 <h4 className="font-bold text-xl mb-2">Instant Prep</h4>
                 <p className="text-zinc-400 text-sm">
-                  Tickets fire directly to relevant stations.
+                  KOTs fire straight to the kitchen screen the moment you
+                  confirm.
                 </p>
               </div>
             </div>
@@ -67,7 +69,8 @@ export function Workflow() {
               <div>
                 <h4 className="font-bold text-xl mb-2">Sync & Pay</h4>
                 <p className="text-zinc-400 text-sm">
-                  Real-time status updates at the table.
+                  Track every order to the table and settle by cash, card, or
+                  online payment.
                 </p>
               </div>
             </div>

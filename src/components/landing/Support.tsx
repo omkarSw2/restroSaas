@@ -14,13 +14,13 @@ export function Support() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-headline text-4xl lg:text-5xl font-extrabold mb-6 leading-tight text-on-surface">
-              24/7 Support &{" "}
-              <span className="text-primary font-bold">Always-On</span> Training
+              Real Support &{" "}
+              <span className="text-primary font-bold">Hands-On</span> Training
             </h2>
             <p className="text-on-surface-variant text-lg mb-10 leading-relaxed">
-              We don&apos;t just sell software; we&apos;re your partner in
-              success. Get live human assistance anytime, plus a library of
-              training for your new hires.
+              We don&apos;t just sell software — we set it up with you. From
+              installation to your first day of billing, our team stays by your
+              side, and training videos get new staff confident fast.
             </p>
             <ul className="space-y-4 mb-10">
               <li className="flex items-center gap-3">
@@ -36,7 +36,7 @@ export function Support() {
                   check_circle
                 </span>
                 <span className="font-semibold text-on-surface">
-                  Live phone support in &lt; 30 seconds
+                  Phone &amp; email support from real humans
                 </span>
               </li>
               <li className="flex items-center gap-3">

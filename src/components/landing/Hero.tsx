@@ -20,20 +20,16 @@ export function Hero() {
               The Future of Commerce
             </span> */}
             <h1 className="font-headline py-1 text-4xl sm:text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
-              Retail Without <span className="text-primary italic"> Limit</span>{" "}
+              Every Order. Every Table.{" "}
               <br />
-              Starts Here!
+              <span className="text-primary italic">One System.</span>
             </h1>
             <p className="text-lg text-secondary leading-relaxed max-w-xl mb-10">
-              Imagine a system that adapts to your business, scales with your
-              growth, and keeps you ahead at every stage. Our POS software is
-              built to remove limitations — giving you the freedom to expand,
-              experiment, and evolve without operational barriers. Handle
-              high-volume transactions effortlessly, manage multiple stores
-              seamlessly, and gain real-time insights to stay ahead of demand.
-              No restrictions. No slowdowns. Just growth. Because more than just
-              a system, your business deserves a strong foundation for the
-              future.
+              TechResto brings billing, kitchen, menu, and payments together in
+              one fast, reliable POS. Take orders at the counter, at the table
+              via QR, or online — while live dashboards show you exactly how
+              your restaurant is performing. Built for the rush hour, and for
+              everything after it.
             </p>
             {/* <div className="flex flex-wrap gap-4">
               <Link

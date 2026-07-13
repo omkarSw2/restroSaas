@@ -39,12 +39,10 @@ export function WhyChooseUs() {
             <span className="text-primary italic"> Tech Resto</span>
           </h2>
           <p className="text-on-surface-variant max-w-7xl mx-auto text-lg leading-relaxed">
-            Designed for Restaurants That Aim to Lead Tech Resto empowers
-            restaurants with intelligent tools, seamless automation, and
-            complete control over operations—so you stay one step ahead. From
-            managing multiple outlets to delivering consistent service,
-            everything is built to support your growth journey. Because leaders
-            don&apos;t follow trends — they set them.
+            Designed for restaurants that aim to lead. TechResto gives you
+            intelligent tools, seamless automation, and complete control over
+            operations — from one outlet to many — so you can focus on food and
+            guests while the system handles the rest.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">

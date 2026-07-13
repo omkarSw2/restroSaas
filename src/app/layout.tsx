@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "techrestoPOS - High-Performance Restaurant POS",
     description:
-      "The ultimate hospitality OS for modern restaurants and retail.",
+      "The ultimate hospitality OS for modern restaurants — billing, KDS, QR ordering, inventory, and loyalty in one system.",
     url: "https://www.techrestopos.com",
     siteName: "techrestoPOS",
     locale: "en_IN",

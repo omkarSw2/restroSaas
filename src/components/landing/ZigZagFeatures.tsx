@@ -6,29 +6,29 @@ import Link from "next/link";
 
 const features = [
   {
-    title: "Seamless Kitchen Integration",
-    description: "Connect your front-of-house with the kitchen instantly. Reduce errors and speed up service with our real-time Kitchen Display System (KDS) that scales with your business.",
+    title: "From Order to Kitchen, Instantly",
+    description: "The moment an order is confirmed, it appears on your Kitchen Display System — no paper tickets, no shouting across the pass, no missed modifiers. Chefs see a live queue of what to cook; your floor staff see what's ready to serve.",
     image: "/features/kitchen_pos.png",
-    cta: "Explore POS Solutions",
+    cta: "Explore the KDS",
     href: "#contact",
   },
   {
-    title: "Mobile Ordering Excellence",
-    description: "Empower your customers to order from anywhere. A seamless mobile experience that drives higher ticket sizes and builds customer loyalty through convenience.",
+    title: "QR Ordering Your Guests Will Love",
+    description: "Guests scan the QR code on their table and order from their own phone — nothing to download, nothing to explain. Orders land straight in the kitchen, so your staff spend their time serving, not scribbling.",
     image: "/features/mobile_ordering.png",
-    cta: "Mobile Ordering",
+    cta: "See QR Ordering",
     href: "#contact",
   },
   {
-    title: "Data-Driven Decisions",
-    description: "Unlock powerful insights into your restaurant's performance. Monitor sales, inventory, and staff efficiency in real-time with our advanced analytics suite.",
+    title: "Decisions Backed by Data",
+    description: "Know your bestsellers, your busiest hours, and your most loyal customers. Sales and item reports update live and export to Excel whenever your accountant needs them.",
     image: "/features/analytics.png",
     cta: "Analyze Your Data",
     href: "#contact",
   },
   {
-    title: "Effortless Table Management",
-    description: "Optimize your floor plan and manage reservations with ease. Minimize wait times and maximize turnover with our intuitive table management tools.",
+    title: "Every Table, Under Control",
+    description: "See your whole floor at a glance — which tables are free, occupied, or reserved. Organize dining areas, take reservations, and turn tables faster on your busiest nights.",
     image: "/features/table_management.png",
     cta: "Optimize Your Floor",
     href: "#contact",
@@ -55,7 +55,8 @@ export function ZigZagFeatures() {
             transition={{ delay: 0.1 }}
             className="text-on-surface-variant text-xl max-w-2xl mx-auto"
           >
-            Everything you need to run a successful restaurant, streamline operations, and delight your guests.
+            Everything you need to run a smoother service — from the front door
+            to the kitchen pass.
           </motion.p>
         </div>
 

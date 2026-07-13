@@ -16,7 +16,7 @@ export function Footer() {
             />
           </div>
           <p className="text-zinc-400 mb-6">
-            High-performance point of sale for the next generation of commerce.
+            The high-performance POS built for modern restaurants.
           </p>
           <div className="flex gap-4">
             <Link
@@ -129,7 +129,7 @@ export function Footer() {
       </div>
       <div className="px-8 py-6 border-t border-zinc-800 text-center max-w-7xl mx-auto">
         <p className="text-zinc-500 text-xs italic opacity-80">
-          © 2024 TechResto POS. All rights reserved.
+          © {new Date().getFullYear()} TechResto POS. All rights reserved.
         </p>
       </div>
     </footer>

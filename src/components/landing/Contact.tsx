@@ -108,8 +108,8 @@ export function Contact() {
             transition={{ delay: 0.1 }}
             className="max-w-2xl text-xl text-secondary font-medium leading-relaxed"
           >
-            Ready to accelerate your commerce? Our team is standing by to build
-            your custom TechResto experience.
+            Ready to see TechResto in action? Book a free demo and we&apos;ll
+            walk you through it — on your menu, your tables, your workflow.
           </motion.p>
         </div>
         {/* Decorative background elements */}
