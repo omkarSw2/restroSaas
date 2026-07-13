@@ -49,7 +49,7 @@ export function Support() {
               </li>
             </ul>
             <a
-              href="mailto:contact@techresto.com?subject=Support%20Request%20-%20TechResto"
+              href="mailto:contact@techrestopos.com?subject=Support%20Request%20-%20TechResto"
               className="inline-block bg-zinc-900 text-white px-10 py-4 rounded-xl font-bold hover:bg-black transition-all text-center"
             >
               Contact Support

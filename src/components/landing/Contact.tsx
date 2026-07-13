@@ -335,11 +335,14 @@ export function Contact() {
                 <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
                   Call Our Strategists
                 </h4>
-                <p className="text-secondary font-medium tracking-tight">
+                <a
+                  href="tel:+918747913421"
+                  className="text-secondary font-medium tracking-tight hover:text-primary transition-colors"
+                >
                   +91 87479 13421
-                </p>
+                </a>
                 <p className="text-zinc-400 text-sm mt-1">
-                  Mon-Fri, 8am-8pm EST
+                  Mon-Fri, 8am-8pm IST
                 </p>
               </div>
             </div>
@@ -353,9 +356,12 @@ export function Contact() {
                 <h4 className="font-headline font-bold text-xl mb-1 text-zinc-900">
                   Email Support
                 </h4>
-                <p className="text-secondary font-medium tracking-tight">
-                  contact@techresto.com
-                </p>
+                <a
+                  href="mailto:contact@techrestopos.com"
+                  className="text-secondary font-medium tracking-tight hover:text-primary transition-colors"
+                >
+                  contact@techrestopos.com
+                </a>
                 <p className="text-zinc-400 text-sm mt-1">
                   Response within 2 hours
                 </p>
