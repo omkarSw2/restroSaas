@@ -16,16 +16,16 @@ const reasons = [
       "Monitor real-time sales, track performance metrics, and gain actionable insights—all in one place. Make faster, smarter decisions exactly when it matters.",
   },
   {
-    icon: "support_agent",
+    icon: "bolt",
     title: "High-Speed Billing Engine",
     description:
       "Process orders and payments in seconds with a system designed for peak-hour performance—reducing wait times and enhancing customer satisfaction.",
   },
   {
     icon: "support_agent",
-    title: "24x7 Support",
+    title: "Dedicated Support",
     description:
-      "Our dedication support team is always ready to help you , you can reach out to us via call or email anytime",
+      "Our support team is ready to help over phone, email, and the in-app helpdesk — with priority handling for critical issues so your service never stops.",
   },
 ];
 

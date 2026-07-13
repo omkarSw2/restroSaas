@@ -91,11 +91,6 @@ const softwareSchema = {
     "price": "0.00",
     "priceCurrency": "INR",
     "description": "Free trial and live interactive demo available"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "184"
   }
 };
 
@@ -119,7 +114,7 @@ const faqSchema = {
       "name": "Is my data secure with your POS system?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, security is our top priority. We use end-to-end encryption for all transaction data and are fully PCI-DSS Level 1 compliant. Your data is backed up daily in secure cloud servers with 99.9% uptime guarantee."
+        "text": "Yes, security is our top priority. All traffic is encrypted over SSL and payments are processed by trusted gateways like Razorpay, Stripe, and PayPal — card details never touch our servers. Every restaurant runs on its own isolated database with automated nightly backups."
       }
     },
     {
@@ -127,7 +122,7 @@ const faqSchema = {
       "name": "What hardware is compatible with the software?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our platform is designed to be hardware-agnostic. It works seamlessly on iPads, Android tablets, and most Windows-based POS terminals. We also integrate with major receipt printers, cash drawers, and card readers like Star Micronics and Epson."
+        "text": "Our platform is completely hardware-agnostic. It runs in any modern browser on iPads, Android tablets, and Windows machines, and can be installed as an app on any device. KOTs and customer bills print to any connected receipt printer directly from the browser, with silent one-click printing supported on kiosk setups."
       }
     },
     {
@@ -143,15 +138,15 @@ const faqSchema = {
       "name": "What kind of customer support do you offer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We offer 24/7 technical support via chat, email, and phone for all our customers. Our Professional and Enterprise plans include priority queuing and dedicated account managers for expedited resolution of critical issues."
+        "text": "We support you from day one — on-site installation assistance, phone and email support, and an in-app helpdesk where you can raise tickets and track resolutions. Critical issues get priority handling so your service is never interrupted."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I integrate with my existing accounting software?",
+      "name": "What integrations does techrestoPOS support?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Absolutely. We offer native integrations with QuickBooks, Xero, and NetSuite. This allows for automatic daily sales syncing, reducing manual data entry and ensuring your books are always up to date."
+        "text": "techrestoPOS supports 15+ payment gateways including Razorpay, Stripe, PayPal, and Paytm, and integrates with UrbanPiper to sync your menu and orders with delivery platforms like Zomato and Swiggy. Sales and item reports export to Excel for your accountant or any accounting tool."
       }
     }
   ]

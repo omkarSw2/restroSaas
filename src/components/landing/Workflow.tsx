@@ -13,7 +13,7 @@ export function Workflow() {
           </h2>
           <p className="text-zinc-400 text-lg leading-relaxed">
             TechResto bridges the gap between Front-of-House and Kitchen,
-            reducing ticket times by 40% on average.
+            helping your kitchen turn orders around dramatically faster.
           </p>
         </div>
         <div className="relative max-w-5xl mx-auto">

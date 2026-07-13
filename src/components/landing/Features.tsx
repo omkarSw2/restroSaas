@@ -29,8 +29,9 @@ export function Features() {
             Easy Billing
           </h3>
           <p className="text-on-surface-variant leading-relaxed text-lg max-w-md">
-            Split checks, handle partial payments, and manage tips in a single
-            fluid motion. Designed for peak-hour chaos.
+            Lightning-fast billing for dine-in, takeaway, and delivery — with
+            offers, happy-hour pricing, and GST-ready invoices. Designed for
+            peak-hour chaos.
           </p>
         </motion.div>
 

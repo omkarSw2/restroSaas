@@ -19,7 +19,7 @@ export function CTA() {
             Ready to accelerate your ledger?
           </h2>
           <p className="text-on-primary text-lg mb-12 max-w-2xl mx-auto opacity-90">
-            Join over 10,000+ businesses running on TechResto. Setup takes
+            Join the growing family of restaurants running on TechResto. Setup takes
             minutes, impact lasts a lifetime.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
