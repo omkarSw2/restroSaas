@@ -106,6 +106,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Prevent decorative elements that extend past the viewport from
+     widening the mobile layout viewport (causes zoomed-out rendering) */
+  overflow-x: clip;
 }
 
 @layer base {

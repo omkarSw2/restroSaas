@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function Features() {
   return (
-    <section className="py-10 max-w-7xl mx-auto px-8 relative" id="features">
+    <section className="py-10 max-w-7xl mx-auto px-8 relative overflow-hidden" id="features">
       {/* Premium Glassmorphism Background Glow Accents */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl -z-10 pointer-events-none"></div>
