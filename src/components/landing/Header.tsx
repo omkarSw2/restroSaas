@@ -27,9 +27,9 @@ export function Header() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled 
-        ? "bg-white/95 shadow-md py-2 dark:bg-zinc-950/95 border-b border-zinc-100 dark:border-zinc-800" 
-        : "bg-white/80 backdrop-blur-xl shadow-sm py-4 dark:bg-zinc-950/80"
+      scrolled
+        ? "bg-white/95 shadow-md py-2.5 dark:bg-zinc-950/95 border-b border-zinc-100 dark:border-zinc-800"
+        : "bg-white/80 backdrop-blur-xl border-b border-zinc-100/50 py-3.5 dark:bg-zinc-950/80"
     }`}>
       <div className="flex justify-between items-center px-8 max-w-7xl mx-auto font-headline font-semibold tracking-tight">
         <Link
@@ -43,14 +43,14 @@ export function Header() {
             width={200}
             height={100}
             priority
-            className="h-8 w-auto md:h-20"
+            className="h-8 w-auto md:h-10"
           />
         </Link>
         <div className="hidden md:flex gap-8 items-center">
           {menuItems.map((item) => (
             <Link
               key={item.name}
-              className="text-zinc-600 hover:text-primary transition-colors duration-200"
+              className="text-[15px] font-medium text-zinc-600 hover:text-primary transition-colors duration-200"
               href={item.href}
             >
               {item.name}

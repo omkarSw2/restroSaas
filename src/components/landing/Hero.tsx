@@ -16,9 +16,10 @@ export function Hero() {
             transition={{ duration: 0.6 }}
             className="z-10"
           >
-            {/* <span className="inline-block py-1 px-4 rounded-full bg-primary-container text-on-primary-container text-xs font-bold tracking-widest uppercase mb-6">
-              The Future of Commerce
-            </span> */}
+            <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6 border border-primary/10">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              The Complete Restaurant OS
+            </span>
             <h1 className="font-headline py-1 text-4xl sm:text-5xl md:text-7xl font-extrabold text-on-surface tracking-tight leading-[1.1] mb-8">
               Every Order. Every Table.{" "}
               <br />
@@ -31,21 +32,41 @@ export function Hero() {
               your restaurant is performing. Built for the rush hour, and for
               everything after it.
             </p>
-            {/* <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Link
                 href="#contact"
-                className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold font-headline flex items-center gap-2 hover:bg-primary-dim transition-all"
+                className="techresto-gradient text-on-primary px-8 py-4 rounded-xl font-bold font-headline flex items-center gap-2 shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:scale-95 transition-all duration-200"
               >
-                View Live Demo{" "}
+                Book a Free Demo{" "}
                 <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
               <Link
-                href="#contact"
-                className="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-bold font-headline hover:bg-surface-container-high transition-all"
+                href="#features"
+                className="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-bold font-headline hover:bg-surface-container-high active:scale-95 transition-all duration-200"
               >
-                Hardware Bundles
+                Explore Features
               </Link>
-            </div> */}
+            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-on-surface-variant font-medium">
+              <span className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary text-lg">
+                  check_circle
+                </span>
+                14-day free trial
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary text-lg">
+                  check_circle
+                </span>
+                No credit card needed
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="material-symbols-outlined text-primary text-lg">
+                  check_circle
+                </span>
+                Billing within 48 hours
+              </span>
+            </div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
