@@ -20,12 +20,9 @@ export async function submitContactForm(data: ContactFormValues) {
   const { fullName, email, businessName, phoneNumber, businessType, message } = validatedFields.data;
 
   try {
-    console.time("submitContactForm-db-connect");
     // Connect to MongoDB
     await connectDB();
-    console.timeEnd("submitContactForm-db-connect");
-    
-    console.time("submitContactForm-db-create");
+
     // Save to database
     await Contact.create({
       fullName,
@@ -35,31 +32,37 @@ export async function submitContactForm(data: ContactFormValues) {
       businessType,
       message,
     });
-    console.timeEnd("submitContactForm-db-create");
 
-    // Send Email alert via Resend if API key exists
-    if (process.env.RESEND_API_KEY) {
-      console.time("submitContactForm-email-send");
+    // Send email alert via Resend if fully configured
+    const resendApiKey = process.env.RESEND_API_KEY;
+    const contactTo = process.env.CONTACT_TO_EMAIL;
+    const contactFrom = process.env.CONTACT_FROM_EMAIL;
+
+    if (resendApiKey && contactTo && contactFrom) {
       try {
-        const resend = new Resend(process.env.RESEND_API_KEY);
+        const resend = new Resend(resendApiKey);
         await resend.emails.send({
-          from: "Acme <onboarding@resend.dev>",
-          to: ["delivered@resend.dev"], // Replace with actual recipient
+          from: contactFrom,
+          to: contactTo.split(",").map((address) => address.trim()),
+          replyTo: email,
           subject: `New Lead: ${businessName || businessType || fullName}`,
           text: `Name: ${fullName}\nEmail: ${email}\nBusiness Name: ${businessName}\nPhone: ${phoneNumber}\nBusiness Type: ${businessType}\nMessage: ${message}`,
         });
       } catch (emailErr) {
+        // The lead is already saved; a failed notification shouldn't fail the request
         console.error("Email send error (swallowed):", emailErr);
-      } finally {
-        console.timeEnd("submitContactForm-email-send");
       }
+    } else if (resendApiKey) {
+      console.warn(
+        "RESEND_API_KEY is set but CONTACT_TO_EMAIL/CONTACT_FROM_EMAIL are missing; skipping lead notification email.",
+      );
     }
 
     return { success: true, message: "Thank you! Your request has been submitted." };
   } catch (err: unknown) {
     const error = err as Error;
     console.error("Save to DB error:", error.message || error);
-    
+
     let errorMessage = "Failed to submit form. Please try again later.";
     if (error.name === "MongooseServerSelectionError") {
       errorMessage = "Database connection timeout. Please check your network or try again later.";

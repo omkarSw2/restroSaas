@@ -48,22 +48,13 @@ export const metadata: Metadata = {
       "The ultimate hospitality OS for modern restaurants and retail.",
     url: "https://www.techrestopos.com",
     siteName: "techrestoPOS",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "techrestoPOS Dashboard",
-      },
-    ],
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "techrestoPOS - Restaurant Management Simplified",
-    description: "Steamline your restaurant operations with techrestoPOS.",
-    images: ["/og-image.png"],
+    description: "Streamline your restaurant operations with techrestoPOS.",
     creator: "@techrestopos",
   },
   robots: {
