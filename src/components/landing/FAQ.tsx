@@ -33,7 +33,7 @@ export function FAQ() {
     {
       question: "What integrations does techrestoPOS support?",
       answer:
-        "techrestoPOS supports 15+ payment gateways including Razorpay, Stripe, PayPal, and Paytm, and integrates with UrbanPiper to sync your menu and orders with delivery platforms like Zomato and Swiggy. Sales and item reports export to Excel for your accountant or any accounting tool.",
+        "techrestoPOS supports 15+ payment gateways including Razorpay, Stripe, PayPal, and Paytm, plus SMS notifications via Twilio and MSG91. Sales and item reports export to Excel for your accountant or any accounting tool.",
     },
   ];
 
