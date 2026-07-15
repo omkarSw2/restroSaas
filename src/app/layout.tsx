@@ -17,7 +17,7 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://www.techrestopos.com",
+    process.env.NEXT_PUBLIC_APP_URL || "https://techrestopos.com",
   ),
   title: {
     default: "techrestoPOS - High-Performance Restaurant POS & Management System",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Billing Software",
     "Hospitality OS",
   ],
-  authors: [{ name: "techrestoPOS Team", url: "https://www.techrestopos.com" }],
+  authors: [{ name: "techrestoPOS Team", url: "https://techrestopos.com" }],
   creator: "Techcardz Services Private Limited",
   publisher: "Techcardz Services Private Limited",
   formatDetection: {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "techrestoPOS - High-Performance Restaurant POS",
     description:
       "The ultimate hospitality OS for modern restaurants — billing, KDS, QR ordering, inventory, and loyalty in one system.",
-    url: "https://www.techrestopos.com",
+    url: "https://techrestopos.com",
     siteName: "techrestoPOS",
     locale: "en_IN",
     type: "website",
@@ -98,8 +98,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "techrestoPOS",
-  "url": "https://www.techrestopos.com",
-  "logo": "https://www.techrestopos.com/favicon.png",
+  "url": "https://techrestopos.com",
+  "logo": "https://techrestopos.com/favicon.png",
   "sameAs": [
     "https://twitter.com/techrestopos"
   ]
