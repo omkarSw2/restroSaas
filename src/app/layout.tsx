@@ -165,7 +165,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         {/* Load Google Tag Manager optimized container script */}
-        <GoogleTagManager />
+        <GoogleTagManager gaId={process.env.NEXT_PUBLIC_GA_ID || "G-PYSCFX1E64"} />
 
         {/* Inject JSON-LD SEO schemas directly into head */}
         <script

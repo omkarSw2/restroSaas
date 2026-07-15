@@ -6,23 +6,30 @@
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag?: (...args: any[]) => void;
   }
 }
 
 /**
- * Push an event to the GTM dataLayer.
- * Safely checks if window and dataLayer exist to prevent Server-Side Rendering (SSR) issues.
+ * Push an event to Google Analytics.
+ * Routes through gtag() when GA4 is loaded (so events register as GA4 events),
+ * and falls back to a raw dataLayer push for GTM setups.
+ * Safely checks if window exists to prevent Server-Side Rendering (SSR) issues.
  */
 export function trackEvent(eventName: string, eventParams: Record<string, any> = {}) {
   if (typeof window !== "undefined") {
     try {
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: eventName,
-        ...eventParams,
-        timestamp: new Date().toISOString(),
-      });
-      
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, eventParams);
+      } else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: eventName,
+          ...eventParams,
+          timestamp: new Date().toISOString(),
+        });
+      }
+
       // Log tracking events in development environment for verification
       if (process.env.NODE_ENV === "development") {
         console.log(`[Analytics Event]: ${eventName}`, eventParams);
